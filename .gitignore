@@ -3,7 +3,6 @@
 /*
 !.gitignore
 !.doc
-!wp-content/
 
 # Ignore everything in the "plugins" directory, except the plugins you specify
 wp-content/plugins/*
