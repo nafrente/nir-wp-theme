@@ -10,3 +10,7 @@ Text Domain: nir
 
 This is a custom theme by Simplyphp to Newport Integrated Resiliency Project only.
 */
+
+/* Importing Theme's Main Stylesheet */
+
+@import css/styles.css;
