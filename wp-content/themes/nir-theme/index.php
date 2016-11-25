@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <title><?php wp_title(); ?></title>
     <?php wp_head(); ?>
 
 </head>
@@ -57,7 +58,7 @@
     
 <footer>
     <div class="container">
-        <a href="#top">Return to Top</a>
+        <a href="#top"><i class="fa fa-angle-up" aria-hidden="true"></i> Return to Top</a>
         <p class="copyright">&copy; 2015 Worldways, Inc.</p>
     </div>
 </footer>
