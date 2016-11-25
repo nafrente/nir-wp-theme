@@ -6,7 +6,7 @@ function nir_enqueue(){
     wp_enqueue_style('nir_style');
 
     //Google fonts
-    wp_register_style('nir_roboto', '<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,700" rel="stylesheet">');
+    wp_register_style('nir_roboto', 'https://fonts.googleapis.com/css?family=Roboto:100,300,400,400i,700');
     wp_enqueue_style('nir_roboto');
 
     //Grid system

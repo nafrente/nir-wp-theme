@@ -3,7 +3,8 @@
 html,body {
   border: 0;
   box-sizing: border-box !important;
-  font-family: "Work Sans", "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  //font-family: "Work Sans", "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: 400;
   line-height: 1.5;
   margin: 0;
@@ -47,6 +48,8 @@ a {
 :focus {
   outline: 0;
 }
+
+
 /* INITIALIZATION */
 $default-color: #606060;
 
@@ -224,19 +227,10 @@ footer .container p {
   margin: 0 auto 60px;
   max-width: 1000px;
   width: 100%;
-}
-.main .container article {
-  display: inline-block;
-}
-.main .container article:after {
-  content: '';
-  display: inline-block;
-  clear: both;
-}
-.main .home {
-  display: block !important;
-  margin: 0 auto;
-  max-width: 600px;
+  .home{
+    width:100%;
+
+  }
 }
 .main .home div {
   margin-bottom: 100px;
@@ -569,267 +563,230 @@ label[for='trigram-trigger'] {
     max-width: 900px !important;
     -webkit-transition: 0.333s margin-top ease;
     transition: 0.333s margin-top ease;
-    /*h3{
-                font-size: 1.66em;
-            }
-
-            p{
-                font-size: 1.44em;
-                margin-bottom: 30px;
-
-                & + h3{
-                    font-size: 1.66em;
-                }
-            }*/
-  }
-  /*.secondary{
-
-        h3{
-            font-size: 1.66em;
-            a{
-                font-size: 1.66em !important;
-            }
-        }
-
-        h4{
-            font-size: 1.66em;
-        }
-
-        p{
-            font-size: 1.44em;
-        }
-
-        ul{
-            li{
-                a{
-                    font-size: 1.33em;
-                }
-            }
-        }
-    }*/
-  footer .container {
-    max-width: 1400px;
+    footer .container {
+      max-width: 1400px;
+    }
   }
 }
-@media screen and (max-width: 1200px) {
-  .front-page header {
-    height: 450px !important;
-    background-size: cover;
+  @media screen and (max-width: 1200px) {
+    .front-page header {
+      height: 450px !important;
+      background-size: cover;
+    }
+    header {
+      background-position: 50% 50%;
+      height: 400px;
+      -webkit-transition: 1s height ease, 1s background-position ease;
+      transition: 1s height ease, 1s background-position ease;
+    }
+    header nav {
+      max-width: 840px;
+      padding: 20px 40px;
+    }
+    header nav ul {
+      margin-top: 1.33em;
+    }
+    header nav ul li {
+      margin-right: 1em;
+    }
+    .container {
+      max-width: 800px;
+      -webkit-transition: 1s max-width ease;
+      transition: 1s max-width ease;
+    }
+    .main .primary {
+      margin-top: -100px;
+      -webkit-transition: 1s margin-top ease;
+      transition: 1s margin-top ease;
+    }
+    .main .primary h1 {
+      font-size: 2em;
+    }
+    .main .primary h2 {
+      font-size: 1.33em;
+    }
+    footer .container {
+      max-width: 900px;
+      padding: 0 50px;
+    }
   }
-  header {
-    background-position: 50% 50%;
-    height: 400px;
-    -webkit-transition: 1s height ease, 1s background-position ease;
-    transition: 1s height ease, 1s background-position ease;
+  @media screen and (max-width: 900px) {
+    .front-page header {
+      height: 50vw !important;
+    }
+    header nav {
+      font-size: 0.85em;
+    }
+    header nav div a svg {
+      margin-top: 15px;
+      max-width: 30px;
+      max-height: 30px;
+    }
+    .main .primary {
+      margin-top: -100px;
+      -webkit-transition: 1s margin-top ease;
+      transition: 1s margin-top ease;
+    }
   }
-  header nav {
-    max-width: 840px;
-    padding: 20px 40px;
+  @media screen and (max-width: 720px) {
+    header {
+      background-size: cover;
+    }
+    .main .home div.mission {
+      margin: 0 -20px 100px;
+      padding: 40px 20px 10px;
+    }
   }
-  header nav ul {
-    margin-top: 1.33em;
+  @media screen and (max-width: 660px) {
+    h1 {
+      font-size: 1.5em;
+    }
+    .front-page header nav a svg {
+      fill: $default-color !important;
+    }
+    header {
+      background-size: cover;
+      background-position: 50% 50%;
+      height: 30vh;
+      -webkit-transition: 1s height ease, 1s background-position ease;
+      transition: 1s height ease, 1s background-position ease;
+    }
+    header .container {
+      background: none;
+    }
+    header nav {
+      padding: 0;
+    }
+    header nav div a {
+      background: rgba(255, 255, 255, 0.8);
+      position: fixed;
+      top: 20px;
+      left: 0;
+    }
+    header nav div a svg {
+      height: 36px;
+      margin: 8px 15px 10px 30px;
+      max-height: 36px;
+      max-width: 36px;
+      width: 36px;
+    }
+    header nav div a span {
+      display: none;
+    }
+    header nav ul {
+      display: none;
+    }
+    .main .container {
+      width: 95%;
+    }
+    .main .container > article {
+      margin-bottom: 2em;
+      max-width: 100%;
+      width: 100%;
+    }
+    .main .container > article.home {
+      width: 95%;
+    }
+    .main .container > article.home h1 {
+      font-size: 1.6em;
+      text-align: center;
+    }
+    .main .container > article.home h2 {
+      font-size: 1.6em;
+      margin-bottom: 15px;
+    }
+    .main .container > article.home .portfolio-carousel ul li {
+      float: none;
+      margin: 0 0 30px;
+      width: 100%;
+    }
+    .main .container > article.home .portfolio-carousel ul li:last-child {
+      margin-bottom: 0;
+    }
+    .main .container > article.home .portfolio-carousel ul li a {
+      border: 1px solid rgba(0, 0, 0, 0.6);
+      background-size: 140%;
+      background-position: -50% 50%;
+      height: auto;
+      max-width: 100%;
+      width: 100%;
+    }
+    .main .container > article.home .portfolio-carousel ul li a span {
+      background: rgba(255, 255, 255, 0.6);
+    }
+    .main .container > article.home .portfolio-carousel ul li a span:before,
+    .main .container > article.home .portfolio-carousel ul li a span:after {
+      display: none;
+    }
+    .main .container > article.primary {
+      margin-top: -5vh;
+      box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.125);
+    }
+    .main .container > article.secondary {
+      padding: 0 40px;
+    }
+    .main .container > article.secondary h4 {
+      margin: 40px -10px 10px -10px;
+    }
+    label[for='trigram-trigger'] {
+      display: block;
+    }
   }
-  header nav ul li {
-    margin-right: 1em;
-  }
-  .container {
-    max-width: 800px;
-    -webkit-transition: 1s max-width ease;
-    transition: 1s max-width ease;
-  }
-  .main .primary {
-    margin-top: -100px;
-    -webkit-transition: 1s margin-top ease;
-    transition: 1s margin-top ease;
-  }
-  .main .primary h1 {
-    font-size: 2em;
-  }
-  .main .primary h2 {
-    font-size: 1.33em;
-  }
-  footer .container {
-    max-width: 900px;
-    padding: 0 50px;
-  }
-}
-@media screen and (max-width: 900px) {
-  .front-page header {
-    height: 50vw !important;
-  }
-  header nav {
-    font-size: 0.85em;
-  }
-  header nav div a svg {
-    margin-top: 15px;
-    max-width: 30px;
-    max-height: 30px;
-  }
-  .main .primary {
-    margin-top: -100px;
-    -webkit-transition: 1s margin-top ease;
-    transition: 1s margin-top ease;
-  }
-}
-@media screen and (max-width: 720px) {
-  header {
-    background-size: cover;
-  }
-  .main .home div.mission {
-    margin: 0 -20px 100px;
-    padding: 40px 20px 10px;
-  }
-}
-@media screen and (max-width: 660px) {
-  h1 {
-    font-size: 1.5em;
-  }
-  .front-page header nav a svg {
-    fill: $default-color !important;
-  }
-  header {
-    background-size: cover;
-    background-position: 50% 50%;
-    height: 30vh;
-    -webkit-transition: 1s height ease, 1s background-position ease;
-    transition: 1s height ease, 1s background-position ease;
-  }
-  header .container {
-    background: none;
-  }
-  header nav {
-    padding: 0;
-  }
-  header nav div a {
-    background: rgba(255, 255, 255, 0.8);
-    position: fixed;
-    top: 20px;
-    left: 0;
-  }
-  header nav div a svg {
-    height: 36px;
-    margin: 8px 15px 10px 30px;
-    max-height: 36px;
-    max-width: 36px;
-    width: 36px;
-  }
-  header nav div a span {
-    display: none;
-  }
-  header nav ul {
-    display: none;
-  }
-  .main .container {
-    width: 95%;
-  }
-  .main .container > article {
-    margin-bottom: 2em;
-    max-width: 100%;
-    width: 100%;
-  }
-  .main .container > article.home {
-    width: 95%;
-  }
-  .main .container > article.home h1 {
-    font-size: 1.6em;
-    text-align: center;
-  }
-  .main .container > article.home h2 {
-    font-size: 1.6em;
-    margin-bottom: 15px;
-  }
-  .main .container > article.home .portfolio-carousel ul li {
-    float: none;
-    margin: 0 0 30px;
-    width: 100%;
-  }
-  .main .container > article.home .portfolio-carousel ul li:last-child {
-    margin-bottom: 0;
-  }
-  .main .container > article.home .portfolio-carousel ul li a {
-    border: 1px solid rgba(0, 0, 0, 0.6);
-    background-size: 140%;
-    background-position: -50% 50%;
-    height: auto;
-    max-width: 100%;
-    width: 100%;
-  }
-  .main .container > article.home .portfolio-carousel ul li a span {
-    background: rgba(255, 255, 255, 0.6);
-  }
-  .main .container > article.home .portfolio-carousel ul li a span:before,
-  .main .container > article.home .portfolio-carousel ul li a span:after {
-    display: none;
-  }
-  .main .container > article.primary {
-    margin-top: -5vh;
-    box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.125);
-  }
-  .main .container > article.secondary {
-    padding: 0 40px;
-  }
-  .main .container > article.secondary h4 {
-    margin: 40px -10px 10px -10px;
-  }
-  label[for='trigram-trigger'] {
-    display: block;
-  }
-}
-@media screen and (max-width: 540px) {
+  @media screen and (max-width: 540px) {
 
-  .front-page header {
-    height: 90vw !important;
-  }
+    .front-page header {
+      height: 90vw !important;
+    }
 
-  .main .home div:first-child {
-    margin-top: 35px;
-  }
+    .main .home div:first-child {
+      margin-top: 35px;
+    }
 
-  .main .container .home div {
-    margin-bottom: 7s0px;
-  }
-  .main .container .home div .mission {
-    background-position: 50% -5%;
-    background-size: 180%;
-  }
-  .main .container article.primary h1 {
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-  .main .container article.primary h2 {
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-  .main .container article.primary h3 {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-  .main .container article.primary p {
-    margin-left: 30px;
-    margin-right: 30px;
-  }
-  .main .container article.secondary {
-    padding: 0 30px;
-  }
-  footer .container {
-    padding: 20px;
-  }
-  footer .container a {
-    float: left;
-    display: block;
-    margin-bottom: 10px;
-  }
-  footer .container a:after {
-    content: '';
-    clear: both;
-  }
-  footer .container p {
-    float: left;
-    margin-bottom: 30px;
-  }
+    .main .container .home div {
+      margin-bottom: 7 s0px;
+    }
+    .main .container .home div .mission {
+      background-position: 50% -5%;
+      background-size: 180%;
+    }
+    .main .container article.primary h1 {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+    .main .container article.primary h2 {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+    .main .container article.primary h3 {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+    .main .container article.primary p {
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+    .main .container article.secondary {
+      padding: 0 30px;
+    }
+    footer .container {
+      padding: 20px;
+    }
+    footer .container a {
+      float: left;
+      display: block;
+      margin-bottom: 10px;
+    }
+    footer .container a:after {
+      content: '';
+      clear: both;
+    }
+    footer .container p {
+      float: left;
+      margin-bottom: 30px;
+    }
 
-  footer .copyright{
-    display: block !important;
-    clear: both;
+    footer .copyright {
+      display: block !important;
+      clear: both;
+    }
   }
-}
