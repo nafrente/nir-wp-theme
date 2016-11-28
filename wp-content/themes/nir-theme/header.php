@@ -22,4 +22,4 @@
         </nav>
     </div>
 </header>
-<div class="paper-edge"></div>
+<!--<div class="paper-edge"></div>-->

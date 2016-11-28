@@ -3,11 +3,13 @@
 // Setup
 add_theme_support('menus');
 add_theme_support( 'title-tag' );
+add_theme_support( 'post-thumbnails' );
 
 // Includes
 include( get_template_directory() . '/includes/enqueue.php');
 include( get_template_directory() . '/includes/setup.php');
 include( get_template_directory() . '/includes/widgets.php');
+include( get_template_directory() . '/includes/portfolio-setup.php');
 
 // Actions & Filters
 add_action('wp_enqueue_scripts', 'nir_enqueue');

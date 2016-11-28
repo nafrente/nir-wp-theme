@@ -3,30 +3,22 @@
 html,body {
   border: 0;
   box-sizing: border-box !important;
-  //font-family: "Work Sans", "Helvetica-Neue", "Helvetica", Arial, sans-serif;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-weight: 400;
-  line-height: 1.5;
   margin: 0;
   padding: 0;
-  text-rendering: optimizeLegibility;
-  font-smoothing: antialiased;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
-div,span,object,iframe,img,table,caption,thead,tbody,tfoot,tr,tr,td,article,aside,canvas,details,figure,hgroup,menu,nav,footer,header,section,summary,mark,audio,video {
+div,span,object,iframe,img,table,caption,thead,tbody,tfoot,tr,tr,td,article,aside,canvas,details,figure,menu,nav,footer,header,section,summary,mark,audio,video {
   border: 0;
   margin: 0;
   padding: 0;
 }
-h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,cit,code,del,dfn,em,ins,q,samp,small,strong,sub,sup,b,i,hr,dl,dt,dd,ol,ul,li,fieldset,legend,label {
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,address,code,del,dfn,em,ins,q,samp,small,strong,sub,sup,b,i,hr,dl,dt,dd,ol,ul,li,fieldset,legend,label {
   border: 0;
   font-size: 100%;
   vertical-align: baseline;
   margin: 0;
   padding: 0;
 }
-article,aside,canvas,figure,figure img,figcaption,hgroup,footer,header,nav,section,audio,video {
+article,aside,canvas,figure,figure img,figcaption,footer,header,nav,section,audio,video {
   display: block;
 }
 table {
@@ -51,8 +43,9 @@ a {
 
 
 /* INITIALIZATION */
-$default-color: #606060;
-
+$default-color: #272c35;
+$default-bg: #f9fafb;
+$default-link: #35ba7c;
 
 * {
   color: $default-color;
@@ -61,6 +54,17 @@ $default-color: #606060;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
+}
+body{
+  //font-family: "Work Sans", "Helvetica-Neue", "Helvetica", Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $default-bg;
 }
 body.front-page a {
   color: #27BDCF;
@@ -180,7 +184,6 @@ header nav div a span {
 header nav ul {
   list-style-type: none;
   margin-top: 1.25em;
-  text-indent: none;
   float: right;
 }
 header nav ul li {
@@ -530,6 +533,98 @@ label[for='trigram-trigger'] {
 #trigram-trigger:checked ~ header nav div a svg {
   opacity: 0;
 }
+
+/////////////////* Custom CSS Starts*//////////////////
+.container::after{
+  content: " ";
+  display: block;
+  width: 100%;
+  clear: both;
+}
+.single-post{
+  .single-sidebar{
+    display: block;
+    float: right;
+    width: 33.334%;
+    margin:0;
+    padding: 0;
+  }
+  .single-main{
+    background: #ffffff;
+    -webkit-box-shadow: 0px 6px 45px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 6px 45px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 6px 45px -4px rgba(0,0,0,0.75);
+    margin: 0;
+    padding: 0 0 30px;
+    position: relative;
+    top: -50px;
+    float: left;
+    width: 66.667%;
+    h1{
+      font-weight: 300;
+      padding: 10px 30px 0;
+      font-size: 35px;
+    }
+    h2{
+      font-weight: 400;
+      font-size: 22px;
+      padding: 15px 30px;
+    }
+    .basic, .green, .blue{
+      padding: 15px 30px 5px;
+      h2{
+        margin: 10px 0;
+        padding: 0;
+      }
+    }
+    .green{
+      background: -moz-linear-gradient(left,  rgba(197,226,206,1) 0%, rgba(241,248,243,0) 75%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(left,  rgba(197,226,206,1) 0%,rgba(241,248,243,0) 75%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right,  rgba(197,226,206,1) 0%,rgba(241,248,243,0) 75%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5e2ce', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+    }
+    .blue{
+      background: -moz-linear-gradient(left,  rgba(187,224,232,1) 0%, rgba(238,247,249,0) 75%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+      background: -webkit-linear-gradient(left,  rgba(187,224,232,1) 0%,rgba(238,247,249,0) 75%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to right,  rgba(187,224,232,1) 0%,rgba(238,247,249,0) 75%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bbe0e8', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+    }
+    .wp-caption, img{
+      max-width: 100% !important;
+      height: auto;
+    }
+    .wp-caption{
+      margin: 20px 0;
+    }
+    .wp-caption-text {
+      padding: 15px;
+      margin-left: 20px;
+      border-left: 2px solid grey;
+      margin-top: -6px;
+    }
+  }
+  .default-widget{
+    margin: 0;
+    padding: 20px 15px;
+    .default-title{
+      margin: 15px 0;
+      border-bottom: 1px solid $default-color;
+      span{
+        padding-left: 15px;
+        padding-bottom: 5px;
+        display: inline-block;
+      }
+    }
+    .default-body{
+      padding-left: 15px;
+      a{
+        color: $default-link;
+      }
+    }
+  }
+}/*End Single Post */
+
+/////////////////* Custom CSS Ends*//////////////////
 /* Responsive */
 @media screen and (min-width: 1600px) {
   .front-page header {
@@ -742,9 +837,6 @@ label[for='trigram-trigger'] {
       margin-top: 35px;
     }
 
-    .main .container .home div {
-      margin-bottom: 7 s0px;
-    }
     .main .container .home div .mission {
       background-position: 50% -5%;
       background-size: 180%;
