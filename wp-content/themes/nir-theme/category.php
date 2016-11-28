@@ -3,10 +3,20 @@
 <div class="single-post">
     <div class="container">
         <aside class="single-sidebar">
-            <div class="sections-block">
-            </div>
+            <?php get_sidebar(); ?>
         </aside>
         <section class="single-main">
+            <?php
+
+            if( have_posts() ){
+                while( have_posts() ){
+                    the_post{
+                        
+                    }
+                }
+            }
+
+            ?>
             <h1>About the Project</h1>
             <div class="basic">
                 <h2>The Newport Integrated Resiliency Model</h2>
@@ -58,7 +68,7 @@
                 </p>
             </div>
 
-            <div class="basic">
+            <div class="blue">
                 <h2>Why Ocean-related Climate Change Resilience Innovation as a Test Issue</h2>
                 <p>The city leadership recognizes that one major component of
                     this new ecosystem will be the emerging role, function and
