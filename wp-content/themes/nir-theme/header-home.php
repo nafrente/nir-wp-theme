@@ -7,7 +7,7 @@
 
 </head>
 
-<body class="default-page">
+<body class="home-page">
 
 <header name="top" class="customize" style="background-color: #26C1DC; background-image:url('<?php echo get_template_directory_uri(); ?>/img/homepage1.jpg');">
     <div class="container">
