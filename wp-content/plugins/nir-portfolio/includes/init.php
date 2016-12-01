@@ -37,4 +37,6 @@ function project_init(){
     );
 
     register_post_type( 'project', $args );
+
+    /* Fixing 404 error bug */  flush_rewrite_rules();
 }

@@ -3,7 +3,7 @@
 <div class="single-project">
     <div class="container">
         <aside class="single-sidebar">
-            <?php get_sidebar(); ?>
+            <?php get_sidebar('internal'); ?>
         </aside>
         <section class="single-main">
             <?php
@@ -13,7 +13,9 @@
 
             <h1><?php the_title(); ?></h1>
 
-            <?php the_content(); ?>
+            <div class="basic">
+                <?php the_content(); ?>
+            </div>
 
             <?php // End of the loop.
             endwhile; ?>
