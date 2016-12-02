@@ -18,12 +18,40 @@ get_header('home');
             
             <div class="portfolio-carousel">
                 <h2>The Newport Integrated Resiliency Portfolio</h2>
-                <ul>
-                    <li><a href="#" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/picture.jpg);"><span>Resilience Innovation Hub</span></a></li>
-                    <li><a href="#" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/sheffield1.jpg);"><span>Sheffield Project</span></a></li>
-                </ul>
-                <a href="#" class="btn">All Projects</a>
-            </div>
+                <div class="the-carousel">
+                    <div class="single" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/picture.jpg);">
+                        <a href="#">
+                            <span>Resilience Innovation Hub</span>
+                        </a>
+                    </div>
+                    <div class="single" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/sheffield1.jpg);">
+                        <a href="#">
+                            <span>Sheffield Project</span>
+                        </a>
+                    </div>
+                    <div class="single" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/sheffield1.jpg);">
+                        <a href="#">
+                            <span>Another Project</span>
+                        </a>
+                    </div>
+
+                    <div class="single" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/picture.jpg);">
+                        <a href="#">
+                            <span>Resilience Innovation Hub</span>
+                        </a>
+                    </div>
+                    <div class="single" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/sheffield1.jpg);">
+                        <a href="#">
+                            <span>Sheffield Project</span>
+                        </a>
+                    </div>
+                    <div class="single" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/sheffield1.jpg);">
+                        <a href="#">
+                            <span>Another Project</span>
+                        </a>
+                    </div>
+                </div>
+            <a href="#" class="btn">All Projects</a>
             
             <div class="mission">
                 <h2>The Newport Integrated Resiliency Model</h2>

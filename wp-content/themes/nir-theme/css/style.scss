@@ -199,111 +199,39 @@ footer {
   margin: -40px 0 0;
   width: 100% !important;
 }*/
+
 .main {
   margin: 0 auto 60px;
   max-width: 1000px;
   width: 100%;
-  .home{
-    width:100%;
-    div {
-      margin-bottom: 100px;
-    }
-    div:first-child {
-      margin-top: 75px;
-    }
-    div.portfolio-carousel ul {
-      list-style-type: none;
-      li {
-        display: inline-block;
-        float: left;
-        margin-right: 30px;
-        a {
-          border: 1px solid rgba(255, 255, 255, 0.9);
-          background-size: 200%;
-          background-position: 20% 50%;
-          background-repeat: no-repeat;
-          color: $default-color;
-          display: inline-block;
-          height: 200px;
-          max-width: 285px;
-          width: 285px;
-          span {
-            background: rgba(255, 255, 255, 0.9);
-            display: block;
-            float: left;
-            font-size: 133%;
-            height: 100%;
-            line-height: 1.66;
-            padding: 40px 20px;
-            -webkit-transition: 0.333s background ease;
-            transition: 0.333s background ease;
-            vertical-align: middle;
-            width: 100%;
-            z-index: 3;
-          }
-          span:before {
-            content: '';
-            background-image: url('../img/paper-edge-corner-top.png');
-            background-size: 100%;
-            background-position: top left;
-            display: block;
-            float: left;
-            margin: -40px -30px -100%;
-            height: 100%;
-            width: 100%;
-            z-index: 1;
-          }
-          span:after {
-            content: '';
-            background-image: url('../img/paper-edge-corner-bottom.png');
-            background-size: 170%;
-            background-position: bottom right;
-            display: block;
-            float: right;
-            margin: -51% -14% -100% 0;
-            height: 200%;
-            width: 140%;
-            z-index: 1;
-          }
-        }
-        a:hover span {
-          background: rgba(255, 255, 255, 0.4);
-          -webkit-transition: 0.333s background ease;
-          transition: 0.333s background ease;
-        }
-      }
-      li:last-child {
-        margin-right: 0;
-      }
-    }
-    div.mission {
-      background-image: url('../img/waterlogued.jpg');
-      background-size: 130%;
-      background-position: 110% 50%;
-      background-repeat: no-repeat;
-      margin: -40px -40px 100px;
-      padding: 40px 40px 10px;
-    }
-    h1 {
-      font-size: 2.6em;
-      font-weight: normal;
-      line-height: 1.667;
-    }
-    h2 {
-      font-size: 2.3em;
-      font-weight: normal;
-      line-height: 1.33;
-      margin-bottom: 30px;
-    }
-    p {
-      margin-bottom: 20px;
-    }
-    p + .btn {
-      margin-top: 10px;
-    }
-  }//home
-}
-.main {
+  .home {
+    width: 100%;
+  }
+  div.mission {
+    background-image: url('../img/waterlogued.jpg');
+    background-size: 130%;
+    background-position: 110% 50%;
+    background-repeat: no-repeat;
+    margin: -40px -40px 100px;
+    padding: 40px 40px 10px;
+  }
+  h1 {
+    font-size: 2.6em;
+    font-weight: normal;
+    line-height: 1.667;
+  }
+  h2 {
+    font-size: 2.3em;
+    font-weight: normal;
+    line-height: 1.33;
+    margin-bottom: 30px;
+  }
+  p {
+    margin-bottom: 20px;
+  }
+  p + .btn {
+    margin-top: 10px;
+  }
   .primary {
     background: #fff;
     border-radius: 0.25em;
@@ -427,6 +355,91 @@ footer {
 
 
 /////////////////* non refactored CSS Starts*//////////////////
+
+.the-carousel{
+  position: relative;
+  .slick-prev:before, .slick-next:before{
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.4);
+  }
+  .slick-prev, .slick-next{
+    width: 38px;
+    height: 38px;
+  }
+  .slick-next{
+    right: 29%;
+    z-index: 2;
+  }
+  .slick-prev{
+    left: -55px;
+  }
+  .single{
+    display: inline-block;
+    margin-right: 30px;
+    background-size: cover;
+    height: 180px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    a {
+      span {
+        background: rgba(255, 255, 255, 0.9);
+        display: block;
+        float: left;
+        font-size: 133%;
+        height: 100%;
+        line-height: 1.66;
+        padding: 40px 20px;
+        -webkit-transition: 0.333s background ease;
+        transition: 0.333s background ease;
+        vertical-align: middle;
+        width: 100%;
+        z-index: 3;
+      }
+      //span:before {
+      //  content: '';
+      //  background-image: url('../img/paper-edge-corner-top.png');
+      //  background-size: 100%;
+      //  background-position: top left;
+      //  display: block;
+      //  float: left;
+      //  margin: -40px -30px -100%;
+      //  height: 100%;
+      //  width: 100%;
+      //  z-index: 1;
+      //}
+      //span:after {
+      //  content: '';
+      //  background-image: url('../img/paper-edge-corner-bottom.png');
+      //  background-size: 170%;
+      //  background-position: bottom right;
+      //  display: block;
+      //  float: right;
+      //  margin: -51% -14% -100% 0;
+      //  height: 200%;
+      //  width: 140%;
+      //  z-index: 1;
+      //}
+    }
+    a:hover span {
+      background: rgba(255, 255, 255, 0.4);
+      -webkit-transition: 0.333s background ease;
+      transition: 0.333s background ease;
+    }
+  }
+  .single:last-child {
+    margin-right: 0;
+  }
+}
+.the-carousel::after{
+  content: "";
+  display: block;
+  position: absolute;
+  width: 34%;
+  height: 190px;
+  right: 0px;
+  background: rgba(248, 251, 252, 0.9);
+  top: 0;
+}
+
 .container::after{
   content: " ";
   display: block;
@@ -727,10 +740,6 @@ footer {
 
   .front-page header {
     height: 90vw !important;
-  }
-
-  .main .home div:first-child {
-    margin-top: 35px;
   }
 
   .main .container .home div .mission {

@@ -173,182 +173,169 @@ footer {
   width: 100%; }
   .main .home {
     width: 100%; }
-    .main .home div {
-      margin-bottom: 100px; }
-    .main .home div:first-child {
-      margin-top: 75px; }
-    .main .home div.portfolio-carousel ul {
-      list-style-type: none; }
-      .main .home div.portfolio-carousel ul li {
-        display: inline-block;
-        float: left;
-        margin-right: 30px; }
-        .main .home div.portfolio-carousel ul li a {
-          border: 1px solid rgba(255, 255, 255, 0.9);
-          background-size: 200%;
-          background-position: 20% 50%;
-          background-repeat: no-repeat;
-          color: #272c35;
-          display: inline-block;
-          height: 200px;
-          max-width: 285px;
-          width: 285px; }
-          .main .home div.portfolio-carousel ul li a span {
-            background: rgba(255, 255, 255, 0.9);
-            display: block;
-            float: left;
-            font-size: 133%;
-            height: 100%;
-            line-height: 1.66;
-            padding: 40px 20px;
-            -webkit-transition: 0.333s background ease;
-            transition: 0.333s background ease;
-            vertical-align: middle;
-            width: 100%;
-            z-index: 3; }
-          .main .home div.portfolio-carousel ul li a span:before {
-            content: '';
-            background-image: url("../img/paper-edge-corner-top.png");
-            background-size: 100%;
-            background-position: top left;
-            display: block;
-            float: left;
-            margin: -40px -30px -100%;
-            height: 100%;
-            width: 100%;
-            z-index: 1; }
-          .main .home div.portfolio-carousel ul li a span:after {
-            content: '';
-            background-image: url("../img/paper-edge-corner-bottom.png");
-            background-size: 170%;
-            background-position: bottom right;
-            display: block;
-            float: right;
-            margin: -51% -14% -100% 0;
-            height: 200%;
-            width: 140%;
-            z-index: 1; }
-        .main .home div.portfolio-carousel ul li a:hover span {
-          background: rgba(255, 255, 255, 0.4);
-          -webkit-transition: 0.333s background ease;
-          transition: 0.333s background ease; }
-      .main .home div.portfolio-carousel ul li:last-child {
-        margin-right: 0; }
-    .main .home div.mission {
-      background-image: url("../img/waterlogued.jpg");
-      background-size: 130%;
-      background-position: 110% 50%;
-      background-repeat: no-repeat;
-      margin: -40px -40px 100px;
-      padding: 40px 40px 10px; }
-    .main .home h1 {
-      font-size: 2.6em;
-      font-weight: normal;
-      line-height: 1.667; }
-    .main .home h2 {
-      font-size: 2.3em;
-      font-weight: normal;
-      line-height: 1.33;
-      margin-bottom: 30px; }
-    .main .home p {
-      margin-bottom: 20px; }
-    .main .home p + .btn {
-      margin-top: 10px; }
-
-.main .primary {
-  background: #fff;
-  border-radius: 0.25em;
-  box-shadow: 0 0.125em 1em rgba(0, 0, 0, 0.25);
-  margin: -150px 0 0 0;
-  max-width: 720px;
-  min-height: 300px;
-  width: 65%;
-  -webkit-transition: 0.333s margin-top ease;
-  transition: 0.333s margin-top ease; }
-  .main .primary a {
-    border-style: dotted;
-    border-bottom-width: 1px;
-    text-decoration: none; }
-  .main .primary .summary {
-    background: rgba(76, 177, 76, 0.15);
-    color: #4CB14C;
-    margin-top: 30px;
-    padding: 30px 0 35px; }
-    .main .primary .summary p {
-      margin-bottom: 0; }
-  .main .primary .summary:after {
-    content: none;
-    display: none !important;
-    clear: none !important; }
-  .main .primary h1, .main .primary h2, .main .primary h3, .main .primary h4, .main .primary h5 {
-    font-weight: 400;
-    margin: 0 40px; }
-  .main .primary h1 {
-    font-size: 3em;
-    line-height: 1.25;
-    margin: 30px 40px 20px; }
-  .main .primary h2 {
-    font-size: 2em;
-    line-height: 1.25;
-    margin: 0 40px 20px; }
-  .main .primary h3 {
-    border-bottom: 1px solid #272c35;
-    font-size: 1em;
-    line-height: 1.25;
-    margin: 0 30px 8px;
-    padding: 0 10px 5px;
-    text-transform: uppercase; }
-  .main .primary p {
-    margin: 0 40px 20px; }
-  .main .primary ul, .main .primary ol {
-    background: rgba(39, 189, 207, 0.075);
-    padding: 20px 0 1px;
+  .main div.mission {
+    background-image: url("../img/waterlogued.jpg");
+    background-size: 130%;
+    background-position: 110% 50%;
+    background-repeat: no-repeat;
+    margin: -40px -40px 100px;
+    padding: 40px 40px 10px; }
+  .main h1 {
+    font-size: 2.6em;
+    font-weight: normal;
+    line-height: 1.667; }
+  .main h2 {
+    font-size: 2.3em;
+    font-weight: normal;
+    line-height: 1.33;
+    margin-bottom: 30px; }
+  .main p {
     margin-bottom: 20px; }
-    .main .primary ul li, .main .primary ol li {
+  .main p + .btn {
+    margin-top: 10px; }
+  .main .primary {
+    background: #fff;
+    border-radius: 0.25em;
+    box-shadow: 0 0.125em 1em rgba(0, 0, 0, 0.25);
+    margin: -150px 0 0 0;
+    max-width: 720px;
+    min-height: 300px;
+    width: 65%;
+    -webkit-transition: 0.333s margin-top ease;
+    transition: 0.333s margin-top ease; }
+    .main .primary a {
+      border-style: dotted;
+      border-bottom-width: 1px;
+      text-decoration: none; }
+    .main .primary .summary {
+      background: rgba(76, 177, 76, 0.15);
+      color: #4CB14C;
+      margin-top: 30px;
+      padding: 30px 0 35px; }
+      .main .primary .summary p {
+        margin-bottom: 0; }
+    .main .primary .summary:after {
+      content: none;
+      display: none !important;
+      clear: none !important; }
+    .main .primary h1, .main .primary h2, .main .primary h3, .main .primary h4, .main .primary h5 {
+      font-weight: 400;
+      margin: 0 40px; }
+    .main .primary h1 {
+      font-size: 3em;
+      line-height: 1.25;
+      margin: 30px 40px 20px; }
+    .main .primary h2 {
+      font-size: 2em;
+      line-height: 1.25;
       margin: 0 40px 20px; }
-      .main .primary ul li span, .main .primary ol li span {
-        border-bottom: 1px solid;
-        padding-bottom: 5px;
-        margin-bottom: 5px;
-        display: block; }
-.main .primary:after {
-  display: none !important; }
-.main .secondary {
-  display: inline-block;
-  float: right;
-  margin: 30px 0 0;
-  max-width: 440px;
-  width: 30%; }
-  .main .secondary a {
-    text-decoration: none;
-    border-bottom-width: 1px;
-    border-style: dotted; }
-  .main .secondary h3 {
-    font-weight: normal;
-    font-size: 1em; }
-    .main .secondary h3 a {
-      border: none; }
-  .main .secondary h4 {
-    font-weight: normal;
-    border-bottom: 1px solid #272c35;
-    margin: 40px 0 10px -10px;
-    padding: 0 10px;
-    text-transform: uppercase; }
-  .main .secondary div ul {
-    list-style-type: none; }
-    .main .secondary div ul li {
-      margin-bottom: 5px; }
-      .main .secondary div ul li a#current:before {
-        border-bottom: none;
-        content: '\2022';
-        display: inline;
-        float: left;
-        margin-left: -10px; }
-  .main .secondary p {
-    margin-bottom: 1em !important; }
-    .main .secondary p span {
-      font-size: 75%;
+    .main .primary h3 {
+      border-bottom: 1px solid #272c35;
+      font-size: 1em;
+      line-height: 1.25;
+      margin: 0 30px 8px;
+      padding: 0 10px 5px;
       text-transform: uppercase; }
+    .main .primary p {
+      margin: 0 40px 20px; }
+    .main .primary ul, .main .primary ol {
+      background: rgba(39, 189, 207, 0.075);
+      padding: 20px 0 1px;
+      margin-bottom: 20px; }
+      .main .primary ul li, .main .primary ol li {
+        margin: 0 40px 20px; }
+        .main .primary ul li span, .main .primary ol li span {
+          border-bottom: 1px solid;
+          padding-bottom: 5px;
+          margin-bottom: 5px;
+          display: block; }
+  .main .primary:after {
+    display: none !important; }
+  .main .secondary {
+    display: inline-block;
+    float: right;
+    margin: 30px 0 0;
+    max-width: 440px;
+    width: 30%; }
+    .main .secondary a {
+      text-decoration: none;
+      border-bottom-width: 1px;
+      border-style: dotted; }
+    .main .secondary h3 {
+      font-weight: normal;
+      font-size: 1em; }
+      .main .secondary h3 a {
+        border: none; }
+    .main .secondary h4 {
+      font-weight: normal;
+      border-bottom: 1px solid #272c35;
+      margin: 40px 0 10px -10px;
+      padding: 0 10px;
+      text-transform: uppercase; }
+    .main .secondary div ul {
+      list-style-type: none; }
+      .main .secondary div ul li {
+        margin-bottom: 5px; }
+        .main .secondary div ul li a#current:before {
+          border-bottom: none;
+          content: '\2022';
+          display: inline;
+          float: left;
+          margin-left: -10px; }
+    .main .secondary p {
+      margin-bottom: 1em !important; }
+      .main .secondary p span {
+        font-size: 75%;
+        text-transform: uppercase; }
+
+.the-carousel {
+  position: relative; }
+  .the-carousel .slick-prev:before, .the-carousel .slick-next:before {
+    font-size: 40px;
+    color: rgba(0, 0, 0, 0.4); }
+  .the-carousel .slick-prev, .the-carousel .slick-next {
+    width: 38px;
+    height: 38px; }
+  .the-carousel .slick-next {
+    right: 29%;
+    z-index: 2; }
+  .the-carousel .slick-prev {
+    left: -55px; }
+  .the-carousel .single {
+    display: inline-block;
+    margin-right: 30px;
+    background-size: cover;
+    height: 180px;
+    border: 1px solid rgba(0, 0, 0, 0.4); }
+    .the-carousel .single a span {
+      background: rgba(255, 255, 255, 0.9);
+      display: block;
+      float: left;
+      font-size: 133%;
+      height: 100%;
+      line-height: 1.66;
+      padding: 40px 20px;
+      -webkit-transition: 0.333s background ease;
+      transition: 0.333s background ease;
+      vertical-align: middle;
+      width: 100%;
+      z-index: 3; }
+    .the-carousel .single a:hover span {
+      background: rgba(255, 255, 255, 0.4);
+      -webkit-transition: 0.333s background ease;
+      transition: 0.333s background ease; }
+  .the-carousel .single:last-child {
+    margin-right: 0; }
+
+.the-carousel::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 34%;
+  height: 190px;
+  right: 0px;
+  background: rgba(248, 251, 252, 0.9);
+  top: 0; }
 
 .container::after {
   content: " ";
@@ -687,9 +674,6 @@ footer {
 @media screen and (max-width: 540px) {
   .front-page header {
     height: 90vw !important; }
-
-  .main .home div:first-child {
-    margin-top: 35px; }
 
   .main .container .home div .mission {
     background-position: 50% -5%;
