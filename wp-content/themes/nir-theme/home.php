@@ -1,4 +1,12 @@
-<?php get_header('home'); ?>
+<?php
+/*
+  * Template Name: Home Page
+  */
+
+
+get_header('home');
+
+?>
 
 <div class="main">
     <div class="container">
