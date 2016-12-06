@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title><?php wp_title(); ?></title>
     <?php wp_head(); ?>
 
+    <?php if(!isset($_SESSION["style"])) { ?>
+        <meta name="customStyle" content="default" />
+        <?php
+    } else { ?>
+        <meta name="customStyle" content="<?php echo $_SESSION["style"]; ?>">
+        <?php } ?>
 </head>
 
 <body class="home-page">
@@ -23,3 +28,4 @@
     </div>
 </header>
 <!--<div class="paper-edge"></div>-->
+<?php style_session_set('tessss'); ?>

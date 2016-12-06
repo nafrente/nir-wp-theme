@@ -14,6 +14,7 @@ include( get_template_directory() . '/includes/widgets.php');
 add_action('wp_enqueue_scripts', 'nir_enqueue');
 add_action('after_setup_theme', 'nir_setup_theme');
 add_action('widgets_init', 'nir_widgets');
+add_action('init', 'style_session');
 
 add_action( 'wp_default_scripts', function( $scripts ) { /* Removing MIGRATE: Migrate is installed, version 1.4.1 message */
     if ( ! empty( $scripts->registered['jquery'] ) ) {
@@ -23,3 +24,12 @@ add_action( 'wp_default_scripts', function( $scripts ) { /* Removing MIGRATE: Mi
 } );
 
 // Shortcodes
+
+// Session Setup
+function style_session(){
+    session_start();//Starting session to save style
+    $_SESSION["style"] = isset($_SESSION["style"]) ? $_SESSION["style"] : "default";
+}
+function style_session_set($nir_value) {
+    $_SESSION["style"] = $nir_value;
+}
