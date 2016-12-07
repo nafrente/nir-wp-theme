@@ -18,10 +18,16 @@ function project_admin_init(){
     //Function to display the metabox
     function nir_project_options($post){
         $project_data = get_post_meta($post->ID, 'project_data', true);
+
         if ($project_data['nir_color'] == ''){
             $nir_color = '#35ba7c';
         }else{
             $nir_color = $project_data['nir_color'];
+        }
+        if ($project_data['nir_logo_color'] == ''){
+            $nir_logo_color = '#ffffff';
+        }else{
+            $nir_logo_color = $project_data['nir_logo_color'];
         }
 
 //        var_dump($post);
@@ -52,6 +58,13 @@ function project_admin_init(){
             <input type="hidden"  name="nir_secret" value="segredo" />
         </div>
 
+        <div class="dagroup">
+            <label class="dalabel">
+                Logo color:
+            </label>
+            <input type="color" class="dafield"  name="nir_logo_color" value="<?php echo $nir_logo_color; ?>" />
+        </div>
+
     <?php
     }
 
@@ -63,6 +76,7 @@ function project_admin_init(){
         }
         $project_data = array();
         $project_data['nir_color'] = sanitize_text_field($_POST['nir_color']);
+        $project_data['nir_logo_color'] = sanitize_text_field($_POST['nir_logo_color']);
 
         update_post_meta( $post_id, 'project_data', $project_data );
 

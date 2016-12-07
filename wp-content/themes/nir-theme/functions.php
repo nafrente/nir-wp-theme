@@ -9,6 +9,7 @@ add_theme_support( 'post-thumbnails' );
 include( get_template_directory() . '/includes/enqueue.php');
 include( get_template_directory() . '/includes/setup.php');
 include( get_template_directory() . '/includes/widgets.php');
+include( get_template_directory() . '/includes/sessions.php');
 
 // Actions & Filters
 add_action('wp_enqueue_scripts', 'nir_enqueue');
@@ -24,12 +25,3 @@ add_action( 'wp_default_scripts', function( $scripts ) { /* Removing MIGRATE: Mi
 } );
 
 // Shortcodes
-
-// Session Setup
-function style_session(){
-    session_start();//Starting session to save style
-    $_SESSION["style"] = isset($_SESSION["style"]) ? $_SESSION["style"] : "default";
-}
-function style_session_set($nir_value) {
-    $_SESSION["style"] = $nir_value;
-}

@@ -95,8 +95,10 @@ body header {
         width: 40%; }
         body header .container nav .branding a {
           border: none; }
+          body header .container nav .branding a span {
+            color: #272c35; }
         body header .container nav .branding svg {
-          fill: white;
+          fill: #272c35;
           display: inline-block;
           float: left;
           margin-right: 15px;
@@ -112,10 +114,7 @@ body header {
           body header .container nav #menu-main li a {
             color: #272c35;
             border-color: transparent;
-            border: none !important;
-            color: white !important; }
-          body header .container nav #menu-main li a:hover {
-            border-color: #27BDCF; }
+            border: none !important; }
 
 body.home-page header {
   height: 600px; }

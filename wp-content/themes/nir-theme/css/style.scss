@@ -106,9 +106,12 @@ body {
           width: 40%;
           a{
             border: none;
+            span {
+              color: $default-color;
+            }
           }
           svg {
-            fill: white;
+            fill: $default-color;
             display: inline-block;
             float: left;
             margin-right: 15px;
@@ -127,10 +130,6 @@ body {
               color: $default-color;
               border-color: transparent;
               border: none !important;
-              color: white !important;
-            }
-            a:hover {
-              border-color: #27BDCF;
             }
           }
         }
