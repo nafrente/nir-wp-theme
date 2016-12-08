@@ -12,42 +12,29 @@ function style_session(){
     $_SESSION["logo_color"] = isset($_SESSION["logo_color"]) ? $_SESSION["logo_color"] : "#FFFFFF";
     $_SESSION["header_bg"] = isset($_SESSION["header_bg"]) ? $_SESSION["header_bg"] : get_template_directory_uri() . '/img/default-header.jpg';
 }
-function set_link_color($nir_link_color) {
-    $_SESSION["link_color"] = $nir_link_color;
-}
-function set_logo_color($nir_logo_color) {
-    $_SESSION["logo_color"] = $nir_logo_color;
-}
-function set_header_bg($nir_header_bg) {
-    $_SESSION["header_bg"] = $nir_header_bg;
-}
-
 
 function updating_styles($nir_project_id){
+    //Setup
     $post_type = get_post_type($nir_project_id);
     if('project' != $post_type){
         return;
     }
-    $nir_project_data = array();
+    //Getting meta data
+    $nir_project_data = $nir_return_data = array();
     $nir_project_data = get_post_meta($nir_project_id , 'project_data', true );
 
-    if ( !isset($nir_project_data) || $nir_project_data['nir_color'] == ''){
-        $_SESSION["link_color"] = '#35ba7c';
-    }else{
-        $_SESSION["link_color"] = $nir_project_data['nir_color'];
-    }
-    if (!isset($nir_project_data) || $nir_project_data['nir_logo_color'] == ''){
-        $_SESSION["link_color"] = '#ffffff';
-    }else{
-        $_SESSION["link_color"] = $nir_project_data['nir_logo_color'];
-    }
+    //Setting link color
+    $_SESSION["link_color"] = isset($nir_project_data['nir_color']) ? $nir_project_data['nir_color'] : "#35ba7c";
+    $nir_return_data['link_color'] = $_SESSION["link_color"];
 
-    //Get the featured image
-    $nir_thumbnail = the_post_thumbnail_url($nir_project_id);
-    if (!$nir_thumbnail || $nir_project_data['header_bg'] == ''){
-        $_SESSION["header_bg"] = get_template_directory_uri() . '/img/default-header.jpg';
-    }else{
-        $_SESSION["header_bg"] = $nir_thumbnail;
-    }
-    return $nir_project_data;
+    //Setting logo color
+    $_SESSION["logo_color"] = isset($nir_project_data['nir_logo_color']) ? $nir_project_data['nir_logo_color'] : "#FFFFFF";
+    $nir_return_data['logo_color'] = $_SESSION["logo_color"];
+
+    //Setting featured image
+    $nir_thumbnail = get_the_post_thumbnail_url($nir_project_id);
+    $_SESSION["header_bg"] = isset($nir_thumbnail) ? $nir_thumbnail : $_SESSION["header_bg"];
+    $nir_return_data['header_bg'] = $_SESSION["header_bg"];
+
+    return $nir_return_data;
 }

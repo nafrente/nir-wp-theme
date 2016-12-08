@@ -4,26 +4,31 @@
     <meta charset="utf-8">
     <?php wp_head(); ?>
 
-    <?php
-    if(!isset($_SESSION["style"])) { echo "not set...";?>
-        <meta session="Not set">
-        <?php
-    } else {echo $_SESSION["style"];
-        ?>
-        <meta session="<?php echo $_SESSION["style"]; ?>">
-        <?php
-    }
-    ?>
+    <!-- Dynamic Custom Style -->
+    <style>
+        /*Logo and text colors*/
+        header a, header a span, body header .container nav #menu-main li a{
+            color: <?php echo $_SESSION["logo_color"]; ?> !important;
+        }
+        body header .container nav .branding svg{
+            fill: <?php echo $_SESSION["logo_color"]; ?> !important;
+        }
+        body a{
+            color: <?php echo $_SESSION["link_color"]; ?> !important;
+        }
+        header.customize{
+            background-image:url('<?php echo $_SESSION["header_bg"]; ?>');
+        }
+    </style>
 
 </head>
 
 <body class="default-page">
-
-<header name="top" class="customize" style="background-color: #26C1DC; background-image:url('<?php echo get_template_directory_uri(); ?>/img/homepage1.jpg');">
+<header name="top" class="customize">
     <div class="container">
         <nav>
             <div class="branding">
-                <a href="/" title="<?php _e('Newport Integrated Resiliency Home', 'nir-theme');?>"><?php echo file_get_contents( get_template_directory_uri() . "/svg/nir-01.svg"); ?>
+                <a href="<?php echo site_url(); ?>" title="<?php _e('Newport Integrated Resiliency Home', 'nir-theme');?>"><?php echo file_get_contents( get_template_directory_uri() . "/svg/nir-01.svg"); ?>
                     <span><?php _e('Newport Integrated', 'nir-theme');?><br /><?php _e('Resiliency', 'nir-theme'); ?></span>
                 </a>
             </div>

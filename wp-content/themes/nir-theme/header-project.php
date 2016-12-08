@@ -4,23 +4,6 @@
     <meta charset="utf-8">
     <?php wp_head(); ?>
 
-    <!-- Dynamic Custom Style -->
-    <style>
-        /*Logo and text colors*/
-        header a, header a span, body header .container nav #menu-main li a{
-            color: <?php echo $_SESSION["logo_color"]; ?> !important;
-        }
-        body header .container nav .branding svg{
-            fill: <?php echo $_SESSION["logo_color"]; ?> !important;
-        }
-        body a{
-            color: <?php echo $_SESSION["link_color"]; ?> !important;
-        }
-        header.customize{
-            background-image:url('<?php echo $_SESSION["header_bg"]; ?>');
-        }
-    </style>
-
 </head>
 
 <body class="home-page">

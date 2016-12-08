@@ -306,19 +306,22 @@ footer {
     background-size: cover;
     height: 180px;
     border: 1px solid rgba(0, 0, 0, 0.4); }
-    .the-carousel .single a span {
-      background: rgba(255, 255, 255, 0.9);
-      display: block;
-      float: left;
-      font-size: 133%;
+    .the-carousel .single a {
       height: 100%;
-      line-height: 1.66;
-      padding: 40px 20px;
-      -webkit-transition: 0.333s background ease;
-      transition: 0.333s background ease;
-      vertical-align: middle;
-      width: 100%;
-      z-index: 3; }
+      width: 100%; }
+      .the-carousel .single a span {
+        background: rgba(255, 255, 255, 0.9);
+        display: block;
+        float: left;
+        font-size: 133%;
+        height: 100%;
+        line-height: 1.66;
+        padding: 40px 20px;
+        -webkit-transition: 0.333s background ease;
+        transition: 0.333s background ease;
+        vertical-align: middle;
+        width: 100%;
+        z-index: 3; }
     .the-carousel .single a:hover span {
       background: rgba(255, 255, 255, 0.4);
       -webkit-transition: 0.333s background ease;

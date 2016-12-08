@@ -19,37 +19,31 @@ get_header('home');
             <div class="portfolio-carousel">
                 <h2>The Newport Integrated Resiliency Portfolio</h2>
                 <div class="the-carousel">
-                    <div class="single" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/picture.jpg);">
-                        <a href="#">
-                            <span>Resilience Innovation Hub</span>
-                        </a>
-                    </div>
-                    <div class="single" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/sheffield1.jpg);">
-                        <a href="#">
-                            <span>Sheffield Project</span>
-                        </a>
-                    </div>
-                    <div class="single" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/sheffield1.jpg);">
-                        <a href="#">
-                            <span>Another Project</span>
-                        </a>
-                    </div>
+                    <?php
 
-                    <div class="single" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/picture.jpg);">
+                    $args = array( 'post_type' => 'project', 'posts_per_page' => 10 );
+                    $loop = new WP_Query( $args );
+                    while ( $loop->have_posts() ) : $loop->the_post();
+                        $post_id = get_the_ID();
+                        if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                            $large_image_url = get_the_post_thumbnail_url();
+                        }
+                        else{
+                            $large_image_url =  the_post_thumbnail_url() . '/default.jpg';
+                        }
+
+                        echo '<div class="single" style="background-image:url(' . $large_image_url . ');">';
+                        echo '<a href="' . get_permalink() . '"><span>'.  get_the_title() . '</span></a>';
+                        echo '</div>';
+                    endwhile;
+                    ?>
+                    <!--
+                    <div class="single" style="background-image:url(<?php //echo get_template_directory_uri(); ?>/img/picture.jpg);">
                         <a href="#">
                             <span>Resilience Innovation Hub</span>
                         </a>
                     </div>
-                    <div class="single" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/sheffield1.jpg);">
-                        <a href="#">
-                            <span>Sheffield Project</span>
-                        </a>
-                    </div>
-                    <div class="single" style="background-image:url(<?php echo get_template_directory_uri(); ?>/img/sheffield1.jpg);">
-                        <a href="#">
-                            <span>Another Project</span>
-                        </a>
-                    </div>
+                    -->
                 </div>
             <a href="#" class="btn">All Projects</a>
             

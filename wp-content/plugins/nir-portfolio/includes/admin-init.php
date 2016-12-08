@@ -17,20 +17,27 @@ function project_admin_init(){
     }
     //Function to display the metabox
     function nir_project_options($post){
+        //Getting the updated meta data
         $project_data = get_post_meta($post->ID, 'project_data', true);
 
-        if ($project_data['nir_color'] == ''){
+        //Setting the default values on the meta data
+        if(!isset($project_data['nir_color']) && !isset($project_data['nir_color']) ){
+            $project_data = array();
+            $nir_color = $project_data['nir_color'] = '#35ba7c';
+            $nir_logo_color = $project_data['nir_logo_color'] = '#ffffff';
+            update_post_meta( $post->ID, 'project_data', $project_data );
+        }
+
+        if ( !isset($project_data['nir_color']) ){
             $nir_color = '#35ba7c';
         }else{
             $nir_color = $project_data['nir_color'];
         }
-        if ($project_data['nir_logo_color'] == ''){
+        if ( !isset($project_data['nir_logo_color']) ){
             $nir_logo_color = '#ffffff';
         }else{
             $nir_logo_color = $project_data['nir_logo_color'];
         }
-
-//        var_dump($post);
 
         ?>
     <!-- Styles of the metabox -->
@@ -47,22 +54,40 @@ function project_admin_init(){
                 display: inline-block;
                 width: 40%;
             }
+            #nir_reset{
+                color: darkred;
+                cursor: pointer;
+            }
 
         </style>
-
+        <script>
+            // Function to reset colors
+            jQuery( document ).ready(function() {
+                jQuery('#nir_reset').on('click', function (event) {
+                    event.preventDefault();
+                    jQuery('#nir_color').val('#35ba7c');
+                    jQuery('#nir_logo_color').val('#ffffff');
+                });
+            });
+        </script>
         <div class="dagroup">
-            <label class="dalabel">
+            <label class="dalabel" for="nir_color">
                 Link color:
             </label>
-            <input type="color" class="dafield"  name="nir_color" value="<?php echo $nir_color; ?>" />
-            <input type="hidden"  name="nir_secret" value="segredo" />
+            <input type="color" class="dafield"  name="nir_color" id="nir_color" value="<?php echo $nir_color; ?>" />
         </div>
 
         <div class="dagroup">
-            <label class="dalabel">
+            <label class="dalabel" for="nir_logo_color">
                 Logo color:
             </label>
-            <input type="color" class="dafield"  name="nir_logo_color" value="<?php echo $nir_logo_color; ?>" />
+            <input type="color" class="dafield" id="nir_logo_color"  name="nir_logo_color" value="<?php echo $nir_logo_color; ?>" />
+        </div>
+
+        <div class="dagroup">
+            <a id="nir_reset">
+                Use default colors
+            </a>
         </div>
 
     <?php
