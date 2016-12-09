@@ -25,6 +25,7 @@ function project_admin_init(){
             $project_data = array();
             $nir_color = $project_data['nir_color'] = '#35ba7c';
             $nir_logo_color = $project_data['nir_logo_color'] = '#ffffff';
+            $nir_text = $project_data['nir_text'] = __('Read More', 'nir-plugin' );
             update_post_meta( $post->ID, 'project_data', $project_data );
         }
 
@@ -44,12 +45,21 @@ function project_admin_init(){
         else{
             $nir_featured = '';
         }
+        if ( !isset($project_data['nir_text']) ){
+            $nir_text = __('Read More', 'nir-plugin' );
+        }else{
+            $nir_text = $project_data['nir_text'];
+        }
         ?>
     <!-- Styles of the metabox -->
         <style>
             .dagroup{
                 display: block;
                 padding: 15px;
+            }
+            .dagroup.txt{
+                display: block;
+                padding: 15px 20px 15px 15px;
             }
             .dafield{
                 display: inline-block;
@@ -64,14 +74,20 @@ function project_admin_init(){
                 width: 10%;
                 text-align: right;
             }
-            .dafield.check input{margin-right: 0;}
+            .dafield.check input{margin-right: -2px;}
             .dalabel.check{
                 display: inline-block;
                 width: 85%;
             }
+            .dalabel.txt, .dafield.txt{
+                display: inline-block;
+                width: 100%;
+            }
             #nir_reset{
-                color: darkred;
                 cursor: pointer;
+            }
+            #nir_reset:hover{
+                color: darkred;
             }
 
         </style>
@@ -82,35 +98,43 @@ function project_admin_init(){
                     event.preventDefault();
                     jQuery('#nir_color').val('#35ba7c');
                     jQuery('#nir_logo_color').val('#ffffff');
+                    jQuery('#nir_text').val('<?php _e('Read More', 'nir-plugin' ) ?>');
                 });
             });
         </script>
         <div class="dagroup">
             <label class="dalabel" for="nir_color">
-                Link color:
+                <?php _e('Link color:', 'nir-plugin' ); ?>
             </label>
             <input type="color" class="dafield"  name="nir_color" id="nir_color" value="<?php echo $nir_color; ?>" />
         </div>
 
         <div class="dagroup">
             <label class="dalabel" for="nir_logo_color">
-                Logo color:
+                <?php _e('Logo color:', 'nir-plugin' ); ?>
             </label>
             <input type="color" class="dafield" id="nir_logo_color"  name="nir_logo_color" value="<?php echo $nir_logo_color; ?>" />
         </div>
+
+        <div class="dagroup txt">
+            <label class="dalabel txt" for="nir_text">
+                <?php _e('Read more button text:', 'nir-plugin' ); ?>
+            </label>
+            <input type="text" class="dafield txt" id="nir_text"  name="nir_text" value="<?php echo $nir_text; ?>" />
+        </div>
+
         <div class="dagroup">
             <label class="dalabel check" for="nir_logo_color">
-                Check if featured project:
+                <?php _e('Check if featured project:', 'nir-plugin' ); ?>
             </label>
             <span class="dafield check">
                 <input type="checkbox" id="nir_featured"  value="featured" name="nir_featured" <?php echo $nir_featured; ?> />
             </span>
-
         </div>
 
         <div class="dagroup">
             <a id="nir_reset">
-                Use default colors
+                <?php _e('Use default', 'nir-plugin' ); ?>
             </a>
         </div>
 
@@ -127,6 +151,7 @@ function project_admin_init(){
         $project_data['nir_color'] = sanitize_text_field($_POST['nir_color']);
         $project_data['nir_logo_color'] = sanitize_text_field($_POST['nir_logo_color']);
         $project_data['nir_featured'] = isset($_POST['nir_featured']) ? 'featured': '';
+        $project_data['nir_text'] = sanitize_text_field($_POST['nir_text']);
 
         update_post_meta( $post_id, 'project_data', $project_data );
 

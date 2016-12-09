@@ -46,6 +46,7 @@ a {
 $default-color: #272c35;
 $default-bg: #f9fafb;
 $default-link: #35ba7c;
+$font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
 * {
   color: $default-color;
@@ -57,7 +58,7 @@ $default-link: #35ba7c;
 }
 body{
   //font-family: "Work Sans", "Helvetica-Neue", "Helvetica", Arial, sans-serif;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-family: $font-family;
   font-weight: 400;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
@@ -361,12 +362,29 @@ footer {
 .the-carousel{
   position: relative;
   .slick-prev:before, .slick-next:before{
+    font-family: $font-family;
     font-size: 40px;
     color: rgba(0, 0, 0, 0.4);
+  }
+  .slick-next::before{
+    position: relative;
+    top: -10px;
+    left: 2px;
+    content: '›';
+  }
+  .slick-prev::before{
+    position: relative;
+    top: -9px;
+    left: -1px;
+    content: '‹';
   }
   .slick-prev, .slick-next{
     width: 38px;
     height: 38px;
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 100%;
+    padding-bottom: 10px;
   }
   .slick-next{
     right: 29%;

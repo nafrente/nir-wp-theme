@@ -10,7 +10,7 @@
 
 //Basic security measures to forbid direct call of this plugin
 if( !function_exists('add_action') ){
-    echo 'Not allowed...';
+    echo __('Not allowed...', 'nir-plugin' );
     exit();
 }
 
