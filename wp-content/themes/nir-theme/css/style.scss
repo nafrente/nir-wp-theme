@@ -43,9 +43,12 @@ a {
 
 
 /* INITIALIZATION */
+//Color variables:
 $default-color: #272c35;
 $default-bg: #f9fafb;
 $default-link: #35ba7c;
+$light-grey: #d2d3d3;
+$dark-grey: #636466;
 $font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
 * {
@@ -340,6 +343,7 @@ footer {
         a#current:before {
           border-bottom: none;
           content: '\2022';
+          content: '\2022';
           display: inline;
           float: left;
           margin-left: -10px;
@@ -556,9 +560,99 @@ footer {
 
 .full-width{
   width: 100%;
-  padding: 0 20px;
-  margin: 20px 10px;
+  padding: 0;
+  margin: 0;
 }
+.portfolio{
+  .single-sidebar{
+    padding-top: 30px;
+    .sorting-title{
+      display: block;
+      color: $light-grey;
+      width: 100%;
+      margin: 20px 40px 10px;
+      height: 30px;
+    }
+    .sorting-links{
+      display: block;
+      width: 100%;
+      margin: 10px 40px;
+      .sorting-link{
+        cursor: pointer;
+        padding: 12px 10px;
+        border: 1px solid #000000;
+        color: $dark-grey;
+      }
+      .sorting-link.selected{
+        background: #bee6f3;
+      }
+      .sorting-link:not(.selected):hover{
+        color: #000000;
+      }
+      .sorting-link.by-title{
+        margin-left: -6px;
+        border-left: none;
+      }
+      .sorting-link.by-title.selected{
+        margin-left: -7px;
+        border-left: 1px solid #000000;
+      }
+    }
+  }
+  .list-projects{
+    -webkit-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.75);
+    margin: 50px 0px;
+    .link-project{
+      background:rgba(255, 255, 255, 0.7);
+      height: 100%;
+      width: 100%;
+      border: none;
+      color: $dark-grey;
+      display: block;
+      padding: 30px;
+      h2{
+        font-size: 30px;
+        font-weight: 400;
+      }
+      p{
+        font-size: 15px;
+        font-weight: 400;
+      }
+
+    }
+    .link-project:hover{
+      background: none;
+      //background: rgba(190, 230, 243, 0.7);
+      //h2, p{
+      //  color: #ffffff !important;
+      //}
+    }
+    .list-project{
+      position: relative;
+      display: block;
+      height: 140px;
+      margin: 0;
+      background-size: cover;
+      background-position-y: 50%;
+      .categories{
+        position: absolute;
+        bottom: 42px;
+        left: 180px;
+        text-transform: uppercase;
+        a{
+          text-decoration: none;
+          color: #272c35 !important;
+          border: none;
+        }
+      }
+    }
+  }
+  .hide{
+    display: none;
+  }
+}//Portfolio
 
 /////////////////* Custom CSS Ends*//////////////////
 /* Responsive */

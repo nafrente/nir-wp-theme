@@ -6,7 +6,7 @@
 
 </head>
 
-<body class="home-page">
+<body class="default-page">
 <header name="top" class="customize">
     <div class="container">
         <nav>
