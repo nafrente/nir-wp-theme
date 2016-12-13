@@ -64,14 +64,15 @@ get_header('home');
                         $large_image_url =  the_post_thumbnail_url() . '/default.jpg';
                     }
                     $nir_project_data = get_post_meta($post_id , 'project_data', true );
-                    if( isset($nir_project_data['nir_featured']) && $nir_project_data['nir_featured'] == 'featured' && $how_many_projects > -1 ){
+                    if( isset($nir_project_data['nir_featured']) && $nir_project_data['nir_featured'] == 'featured' && $how_many_projects > 0 ){
                         echo '<div class="featured-project" style_="background-image:url(' . $large_image_url . ');">';
                         echo '<h2>'.  get_the_title() . '</h2>';
                         echo '<p>'.  get_the_excerpt() .  '</p>';
                         echo '<a href="' . get_permalink() . '" class="btn">'. $nir_project_data['nir_text'] .'</a>';
                         echo '</div>';
+                        $how_many_projects = $how_many_projects - 1;
                     }
-                    $how_many_projects = $how_many_projects - 1;
+
                 endwhile;
 
                 ?>

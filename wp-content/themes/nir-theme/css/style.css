@@ -118,10 +118,14 @@ body header {
             border: none !important; }
 
 body.home-page header {
-  height: 600px; }
+  height: 600px;
+  -webkit-transition: 0.333s height ease;
+  transition: 0.333s height ease; }
 
 body.default-page header {
-  height: 300px; }
+  height: 300px;
+  -webkit-transition: 0.333s height ease;
+  transition: 0.333s height ease; }
 
 .btn {
   background: transparent;
@@ -299,12 +303,12 @@ footer {
     color: rgba(0, 0, 0, 0.4); }
   .the-carousel .slick-next::before {
     position: relative;
-    top: -10px;
+    top: -7px;
     left: 2px;
     content: '›'; }
   .the-carousel .slick-prev::before {
     position: relative;
-    top: -9px;
+    top: -6px;
     left: -1px;
     content: '‹'; }
   .the-carousel .slick-prev, .the-carousel .slick-next {
@@ -575,13 +579,7 @@ footer {
 
 /* Responsive */
 @media screen and (min-width: 1600px) {
-  .front-page header {
-    height: 800px !important; }
-
-  .front-page header nav svg {
-    margin-top: 15px; }
-
-  header {
+  .home-page header {
     background-size: 100%;
     height: 800px !important;
     -webkit-transition: 0.333s height ease;
