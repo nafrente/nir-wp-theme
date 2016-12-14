@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <?php wp_head(); ?>
+    <?php include_once('dynamic-styles.php'); ?>
 
 </head>
 
