@@ -6,6 +6,7 @@ function project_admin_init(){
     add_action('save_post_project', 'nir_saving_metaboxes', 10, 3);
 
     function nir_create_metaboxes(){
+        //Metabox for style options
     add_meta_box(
       'nir_project_options',
         __('Project Options', 'nir-plugin' ),
@@ -14,8 +15,46 @@ function project_admin_init(){
         'side',
         'high'
     );
+        //Metabox for Project Representative
+    add_meta_box(
+        'nir_project_representative',
+        __('Placeholder for Project Representative', 'nir-plugin' ),
+        'nir_project_representative',
+        'project',
+        'normal',
+        'low'
+    );
+        //Metabox for Additional Reading
+        add_meta_box(
+            'nir_project_additional_reading',
+            __('Placeholder for Additional Reading', 'nir-plugin' ),
+            'nir_project_additional_reading',
+            'project',
+            'normal',
+            'low'
+        );
     }
-    //Function to display the metabox
+    //Function to display Project Representative metabox
+    function nir_project_representative(){
+        $value1=  get_post_meta($_GET['post'], 'project_representative' , true ) ;
+        wp_editor(
+            htmlspecialchars_decode($value1),
+            'mettaabox_1',
+            $settings = array('textarea_name'=>'project_representative_input')
+        );
+
+    }
+    //Function to display Additional Reading metabox
+    function nir_project_additional_reading($post){
+        $value2=  get_post_meta($_GET['post'], 'additional_reading' , true ) ;
+        wp_editor(
+            htmlspecialchars_decode($value2),
+            'mettaabox_2',
+            $settings = array('textarea_name'=>'additional_reading_input')
+        );
+    }
+
+    //Function to display the style metabox
     function nir_project_options($post){
         //Getting the updated meta data
         $project_data = get_post_meta($post->ID, 'project_data', true);
@@ -154,6 +193,21 @@ function project_admin_init(){
         $project_data['nir_text'] = sanitize_text_field($_POST['nir_text']);
 
         update_post_meta( $post_id, 'project_data', $project_data );
+
+
+        //project_representative html
+        if (!empty($_POST['project_representative_input']))
+        {
+            $datta=htmlspecialchars($_POST['project_representative_input']);
+            update_post_meta($post_id, 'project_representative', $datta );
+        }
+
+        //Additional Reading
+        if (!empty($_POST['additional_reading_input']))
+        {
+            $datta=htmlspecialchars($_POST['additional_reading_input']);
+            update_post_meta($post_id, 'additional_reading', $datta );
+        }
 
     }
 
