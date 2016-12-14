@@ -383,6 +383,40 @@ footer {
   width: 33.334%;
   margin: 0;
   padding: 0; }
+  .default-page .single-sidebar > div,
+  .single-project .single-sidebar > div,
+  .default-project .single-sidebar > div,
+  .single-post .single-sidebar > div {
+    margin: 20px 10px; }
+  .default-page .single-sidebar .internal-sidebar,
+  .single-project .single-sidebar .internal-sidebar,
+  .default-project .single-sidebar .internal-sidebar,
+  .single-post .single-sidebar .internal-sidebar {
+    padding: 15px; }
+    .default-page .single-sidebar .internal-sidebar .sidebar-title,
+    .single-project .single-sidebar .internal-sidebar .sidebar-title,
+    .default-project .single-sidebar .internal-sidebar .sidebar-title,
+    .single-post .single-sidebar .internal-sidebar .sidebar-title {
+      border-bottom: 1px solid #000; }
+      .default-page .single-sidebar .internal-sidebar .sidebar-title h3,
+      .single-project .single-sidebar .internal-sidebar .sidebar-title h3,
+      .default-project .single-sidebar .internal-sidebar .sidebar-title h3,
+      .single-post .single-sidebar .internal-sidebar .sidebar-title h3 {
+        padding: 10px; }
+    .default-page .single-sidebar .internal-sidebar .sidebar-content,
+    .single-project .single-sidebar .internal-sidebar .sidebar-content,
+    .default-project .single-sidebar .internal-sidebar .sidebar-content,
+    .single-post .single-sidebar .internal-sidebar .sidebar-content {
+      padding: 10px; }
+      .default-page .single-sidebar .internal-sidebar .sidebar-content a,
+      .single-project .single-sidebar .internal-sidebar .sidebar-content a,
+      .default-project .single-sidebar .internal-sidebar .sidebar-content a,
+      .single-post .single-sidebar .internal-sidebar .sidebar-content a {
+        text-decoration: underline !important;
+        border: none;
+        display: block;
+        width: 100%;
+        margin: 10px 0; }
 .default-page .single-main,
 .single-project .single-main,
 .default-project .single-main,

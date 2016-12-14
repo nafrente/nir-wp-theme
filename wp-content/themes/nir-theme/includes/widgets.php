@@ -3,9 +3,9 @@
 function nir_widgets(){
     //Registering the default sidebar
     register_sidebar(array(
-        'name'          => __('Default Page Sidebar Area', 'nir_theme'),
+        'name'          => __('Default Page Sidebar Area', 'nir-theme'),
         'id'            => 'nir_default_sidebar',
-        'description'   => __('Newport Custom Sidebar Area located on the right of the page for blog post and pages.'),
+        'description'   => __('Newport Custom Sidebar Area located on the right of the page for blog post and pages.', 'nir-theme'),
         'class'         => '',
         'before_widget' => '<div id="%1$s" class="default-widget %2$s">',
         'after_widget'  => '</div></div>',
@@ -15,9 +15,9 @@ function nir_widgets(){
 
     //Registering the sidebar for projects page
     register_sidebar(array(
-        'name'          => __('Internal Page Sidebar Area', 'nir_theme'),
+        'name'          => __('Internal Page Sidebar Area', 'nir-theme'),
         'id'            => 'nir_internal_sidebar',
-        'description'   => __('Newport Custom Sidebar Area located on the right of the page for blog post and pages.'),
+        'description'   => __('Newport Custom Sidebar Area located on the right of the page for blog post and pages.', 'nir-theme'),
         'class'         => '',
         'before_widget' => '<div id="%1$s" class="default-widget %2$s">',
         'after_widget'  => '</div></div>',
@@ -45,8 +45,33 @@ function nir_widgets(){
          * @param array $instance
          */
         public function widget( $args, $instance ) {
-            // outputs the content of the widget
-            echo "Internal widget...";
+            // outputs the content of the internal custom widget
+            ?>
+            <script>
+                jQuery( document ).ready(function() {
+                    var $ = jQuery.noConflict();
+                    if($('.single-main h2').length > 0){
+                        $('.single-main h2').each(function(i) {
+                            $(this).attr('id', 'h2-title-'+ i);
+                            $('.sidebar-content').append('<a class="sidebar-link" href="#h2-title-'+ i +'">'+ $(this).text() +'</a>');
+                            i++;
+                        });
+                    }else{
+                        $('.sidebar-content').append('<a class="sidebar-link"><?php _e('No sections available...', 'nir-theme')?></a>');
+                    }
+                });
+            </script>
+                <div class="internal-sidebar">
+
+                    <div class="sidebar-title">
+                        <h3><?php _e('Sections', 'nir-theme')?></h3>
+                    </div>
+                    <div class="sidebar-content">
+
+                    </div>
+                </div>
+
+        <?php
         }
 
         /**

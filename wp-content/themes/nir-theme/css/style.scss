@@ -499,6 +499,28 @@ footer {
     width: 33.334%;
     margin:0;
     padding: 0;
+    > div{
+      margin: 20px 10px;
+    }
+    .internal-sidebar{
+      padding: 15px;
+      .sidebar-title{
+        border-bottom: 1px solid #000;
+        h3{
+          padding: 10px;
+        }
+      }
+      .sidebar-content{
+        padding: 10px;
+        a{
+          text-decoration: underline !important;
+          border: none;
+          display: block;
+          width: 100%;
+          margin: 10px 0;
+        }
+      }
+    }
   }
   .single-main{
     background: #ffffff;
