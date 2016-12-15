@@ -317,11 +317,11 @@ footer {
       border: none;
       border-bottom: 1px solid #000;
       height: 90px; }
-    .wpcf7-form .contact-group .wpcf7-submit {
-      background: transparent;
-      border: 1px solid #000;
-      padding: 12px;
-      font-size: 15px; }
+  .wpcf7-form .wpcf7-submit {
+    background: transparent;
+    border: 1px solid #000;
+    padding: 12px;
+    font-size: 15px; }
   .wpcf7-form ::-webkit-input-placeholder {
     font-size: 12px; }
   .wpcf7-form :-moz-placeholder {
@@ -596,6 +596,23 @@ footer {
     margin-left: 20px;
     border-left: 2px solid grey;
     margin-top: -6px; }
+.default-page .widget_categories .default-title span,
+.single-project .widget_categories .default-title span,
+.default-project .widget_categories .default-title span,
+.single-post .widget_categories .default-title span {
+  font-weight: 700;
+  font-size: 16px; }
+.default-page .widget_categories ul,
+.single-project .widget_categories ul,
+.default-project .widget_categories ul,
+.single-post .widget_categories ul {
+  list-style: none; }
+  .default-page .widget_categories ul li a,
+  .single-project .widget_categories ul li a,
+  .default-project .widget_categories ul li a,
+  .single-post .widget_categories ul li a {
+    border: none;
+    text-decoration: underline !important; }
 .default-page .default-widget,
 .single-project .default-widget,
 .default-project .default-widget,

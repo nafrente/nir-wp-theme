@@ -400,12 +400,13 @@ footer {
       border-bottom: 1px solid #000;
       height: 90px;
     }
-    .wpcf7-submit{
-      background: transparent;
-      border: 1px solid #000;
-      padding: 12px;
-      font-size: 15px;
-    }
+
+  }
+  .wpcf7-submit{
+    background: transparent;
+    border: 1px solid #000;
+    padding: 12px;
+    font-size: 15px;
   }
   ::-webkit-input-placeholder {
     font-size: 12px;
@@ -625,6 +626,23 @@ footer {
       margin-left: 20px;
       border-left: 2px solid grey;
       margin-top: -6px;
+    }
+  }
+  .widget_categories{
+    .default-title{
+      span{
+        font-weight: 700;
+        font-size: 16px;
+      }
+    }
+    ul{
+      list-style: none;
+      li{
+        a{
+          border: none;
+          text-decoration: underline !important;
+        }
+      }
     }
   }
   .default-widget{
