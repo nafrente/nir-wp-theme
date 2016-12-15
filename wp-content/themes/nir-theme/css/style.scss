@@ -383,6 +383,49 @@ footer {
 
 /////////////////* non refactored CSS Starts*//////////////////
 
+//Styling Contact page
+.wpcf7-form{
+  margin: 35px 0;
+  .contact-group{
+    margin: 25px 0px;
+    input.wpcf7-form-control.wpcf7-text {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #000;
+      height: 25px;
+    }
+    .wpcf7-textarea{
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #000;
+      height: 90px;
+    }
+    .wpcf7-submit{
+      background: transparent;
+      border: 1px solid #000;
+      padding: 12px;
+      font-size: 15px;
+    }
+  }
+  ::-webkit-input-placeholder {
+    font-size: 12px;
+  }
+
+  :-moz-placeholder { /* Firefox 18- */
+    font-size: 12px;
+  }
+
+  ::-moz-placeholder {  /* Firefox 19+ */
+    font-size: 12px;
+  }
+
+  :-ms-input-placeholder {
+    font-size: 12px;
+  }
+
+}
+
+
 .the-carousel{
   position: relative;
 
