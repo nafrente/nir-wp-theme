@@ -104,6 +104,9 @@ body {
         padding: 20px 0;
         width: 100%;
         font-size: 1.125em;
+        #mobile-menu-text{
+          display: none;
+        }
         .branding{
           display: inline-block;
           max-width: 40%;
@@ -382,6 +385,7 @@ footer {
 
 .the-carousel{
   position: relative;
+
   .slick-prev:before, .slick-next:before{
     font-family: $font-family;
     font-size: 40px;
@@ -408,7 +412,7 @@ footer {
     padding-bottom: 10px;
   }
   .slick-next{
-    right: 29%;
+    right: -25px;
     z-index: 2;
   }
   .slick-prev{
@@ -420,6 +424,7 @@ footer {
     background-size: cover;
     height: 180px;
     border: 1px solid rgba(0, 0, 0, 0.4);
+
     a {
       height:100%;
       width: 100%;
@@ -472,16 +477,16 @@ footer {
     margin-right: 0;
   }
 }
-.the-carousel::after{
-  content: "";
-  display: block;
-  position: absolute;
-  width: 34%;
-  height: 190px;
-  right: 0px;
-  background: rgba(248, 251, 252, 0.9);
-  top: 0;
-}
+//.the-carousel::after{
+//  content: "";
+//  display: block;
+//  position: absolute;
+//  width: 34%;
+//  height: 190px;
+//  right: 0px;
+//  background: rgba(248, 251, 252, 0.9);
+//  top: 0;
+//}
 
 .container::after{
   content: " ";
@@ -739,9 +744,9 @@ footer {
   }
 }
 @media screen and (max-width: 1200px) {
-  .front-page header {
+  header {
     height: 450px !important;
-    background-size: cover;
+    background-size: cover !important;
   }
   header {
     background-position: 50% 50%;
@@ -780,130 +785,221 @@ footer {
     padding: 0 50px;
   }
 }
+@media screen and (max-width: 1200px) {
+  .main{
+    max-width: 900px;
+    padding: 15px;
+  }
+}
 @media screen and (max-width: 900px) {
   .front-page header {
     height: 50vw !important;
   }
-  header nav {
-    font-size: 0.85em;
+  body header .container nav {
+    //font-size: 0.85em;
+    padding: 20px;
   }
   header nav div a svg {
-    margin-top: 15px;
-    max-width: 30px;
-    max-height: 30px;
+    margin-top: 0;
+    width: 40px;
+    height: 40px;
+  }
+  body header .container nav #menu-main{
+    margin-top: 20px;
   }
   .main .primary {
     margin-top: -100px;
     -webkit-transition: 1s margin-top ease;
     transition: 1s margin-top ease;
   }
+  .the-carousel{
+    max-height: 230px;
+  }
+  .the-carousel .slick-prev,
+  .the-carousel .slick-next {
+    display: none !important;
+  }
 }
+
 @media screen and (max-width: 720px) {
   header {
     background-size: cover;
   }
   .main .home div.featured-project {
-    margin: 0 -20px 100px;
-    padding: 40px 20px 10px;
+    margin: 0 0 20px;
+    padding: 25px 20px 10px;
   }
 }
 @media screen and (max-width: 660px) {
-  h1 {
-    font-size: 1.5em;
+  .abstract{
+    margin: 10px;
+    h1 {
+      font-size: 1.5em !important;
+    }
   }
-  .front-page header nav a svg {
-    fill: $default-color !important;
+  .main{
+    padding: 0;
+    h2{
+      font-size: 1.3em;
+      margin-top: 30px;
+    }
+    .abstract{
+      margin: 0;
+    }
+  }
+  body header .container nav{
+    padding: 5px 15px;
+    position: fixed;
+    top: 0;
+    background: rgba(0,0,0,.8);
+    z-index: 10;
+    .branding{
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+    .branding a{
+      background: none;
+
+      svg {
+        fill: #ffffff !important;
+        width: 40px;
+        height: 40px;
+        margin: 10px 10px 0px 10px;
+      }
+      span{
+        padding: 5px 10px;
+        display: inline-block;
+      }
+      span.hide-on-mobile{
+        display: none;
+      }
+    }
+    #mobile-menu-text{
+      display: block;
+      text-align: right;
+      .text{
+        position: absolute;
+        float: none;
+        right: 0;
+        display: inline-block;
+        color: #ffffff;
+        cursor: pointer;
+        padding: 10px 20px;
+      }
+      .text.hide{
+        display: none;
+      }
+      .text.open{
+        position: relative;
+        top: 0;
+        width: 100%;
+        padding: 10px 10px 0 0;
+      }
+    }
+    #menu-main{
+      float: none;
+      position: relative;
+      right: 0;
+      top:0;
+      width:100%;
+      margin-top: 10px;
+      margin-bottom: 15px;
+      li{
+        width: 100%;
+        margin: 7px 0;
+        a{
+
+        }
+      }
+      li.current-menu-item{
+        border: none;
+      }
+    }
+    #menu-main.hide-on-mobile{
+      display: none;
+    }
+
   }
   header {
-    background-size: cover;
+    background-size: cover !important;
     background-position: 50% 50%;
-    height: 30vh;
+    height: 30vh !important;
     -webkit-transition: 1s height ease, 1s background-position ease;
     transition: 1s height ease, 1s background-position ease;
   }
-  header .container {
-    background: none;
+
+  .portfolio-carousel{
+    overflow: hidden;
+    .btn{
+      position: relative;
+      z-index: 10;
+    }
+    .the-carousel{
+      .single{
+        -webkit-box-shadow: 0px 6px 45px -4px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0px 6px 45px -4px rgba(0,0,0,0.5);
+        box-shadow: 0px 6px 45px -4px rgba(0,0,0,0.75);
+      }
+      .slick-current.slick-active{
+        width: 352px !important;
+      }
+    }
   }
-  header nav {
-    padding: 0;
+
+  .default-page .single-main, .single-project .single-main, .default-project .single-main, .single-post .single-main {
+    width: 100%;
+    margin: 30px 0px;
+    top: 0;
   }
-  header nav div a {
-    background: rgba(255, 255, 255, 0.8);
-    position: fixed;
-    top: 20px;
-    left: 0;
+  .default-page .single-sidebar, .single-project .single-sidebar, .default-project .single-sidebar, .single-post .single-sidebar {
+    width: 100%;
   }
-  header nav div a svg {
-    height: 36px;
-    margin: 8px 15px 10px 30px;
-    max-height: 36px;
-    max-width: 36px;
-    width: 36px;
+  .portfolio .single-sidebar {
+    .sorting-title{
+      margin: 20px 0px;
+      padding: 0 10px;
+    }
+    .sorting-links{
+      display: block;
+      width: auto;
+      margin: 10px;
+    }
+
   }
-  header nav div a span {
-    display: none;
-  }
-  header nav ul {
-    display: none;
-  }
+
   .main .container {
     width: 95%;
-  }
-  .main .container > article {
-    margin-bottom: 2em;
-    max-width: 100%;
-    width: 100%;
-  }
-  .main .container > article.home {
-    width: 95%;
-  }
-  .main .container > article.home h1 {
-    font-size: 1.6em;
-    text-align: center;
-  }
-  .main .container > article.home h2 {
-    font-size: 1.6em;
-    margin-bottom: 15px;
-  }
-  .main .container > article.home .portfolio-carousel ul li {
-    float: none;
-    margin: 0 0 30px;
-    width: 100%;
-  }
-  .main .container > article.home .portfolio-carousel ul li:last-child {
-    margin-bottom: 0;
-  }
-  .main .container > article.home .portfolio-carousel ul li a {
-    border: 1px solid rgba(0, 0, 0, 0.6);
-    background-size: 140%;
-    background-position: -50% 50%;
-    height: auto;
-    max-width: 100%;
-    width: 100%;
-  }
-  .main .container > article.home .portfolio-carousel ul li a span {
-    background: rgba(255, 255, 255, 0.6);
-  }
-  .main .container > article.home .portfolio-carousel ul li a span:before,
-  .main .container > article.home .portfolio-carousel ul li a span:after {
-    display: none;
-  }
-  .main .container > article.primary {
-    margin-top: -5vh;
-    box-shadow: 0 0.125em 0.5em rgba(0, 0, 0, 0.125);
-  }
-  .main .container > article.secondary {
-    padding: 0 40px;
-  }
-  .main .container > article.secondary h4 {
-    margin: 40px -10px 10px -10px;
   }
   label[for='trigram-trigger'] {
     display: block;
   }
-}
+} /* End 660px */
 @media screen and (max-width: 540px) {
+  .portfolio .list-projects .link-project {
+    padding: 10px 30px;
+    h2{
+      font-size: 24px;
+      line-height: 1.2em;
+    }
+    .categories{
+      bottom: 15px;
+      right: 30px;
+    }
 
+  }
+  .portfolio .list-projects .list-project .categories{
+    bottom: 10px;
+    right: 30px;
+    text-align: right;
+  }
+  .portfolio-carousel{
+    overflow: hidden;
+    .the-carousel{
+      .slick-current.slick-active{
+        width: 290px !important;
+      }
+    }
+  }
   .front-page header {
     height: 90vw !important;
   }
@@ -946,5 +1042,15 @@ footer {
   footer .copyright {
     display: block !important;
     clear: both;
+  }
+}
+@media screen and (max-width: 340px) {
+  .portfolio-carousel{
+    overflow: hidden;
+    .the-carousel{
+      .slick-current.slick-active{
+        width: 190px !important;
+      }
+    }
   }
 }

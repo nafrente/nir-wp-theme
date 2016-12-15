@@ -6,7 +6,7 @@ jQuery( document ).ready(function() {
 
     //Home carousel
     $('.the-carousel').slick({
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
     });
 
@@ -26,4 +26,17 @@ jQuery( document ).ready(function() {
         jQuery(this).addClass('selected');
         jQuery(this).siblings().removeClass('selected');
     });
+
+    //Main menu events
+    $('#mobile-menu-text .text').on('click', function (event) {
+        event.preventDefault();
+        $('#mobile-menu-text .text').toggleClass('hide');
+        if( !$(this).hasClass('open') ){
+            $('#menu-main').removeClass('hide-on-mobile');
+            $('.branding a span').removeClass('hide-on-mobile');
+        }else {
+            $('#menu-main').addClass('hide-on-mobile');
+            $('.branding a span').addClass('hide-on-mobile');
+        }
+    })
 });

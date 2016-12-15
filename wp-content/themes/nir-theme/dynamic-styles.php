@@ -4,8 +4,13 @@
 <!-- Dynamic Custom Style -->
 <style>
     /*Logo and text colors*/
-    header a, header a span, body header .container nav #menu-main li a, body header .container nav #menu-main li.current-menu-item{
+    header a, header a span{
         color: <?php echo $_SESSION["logo_color"]; ?> !important;
+    }
+    body header .container nav #menu-main li a{
+        color: <?php echo $_SESSION["logo_color"]; ?> !important;
+    }
+    body header .container nav #menu-main li.current-menu-item {
         border-color: <?php echo $_SESSION["logo_color"]; ?> !important;
     }
     body header .container nav .branding svg{
@@ -16,5 +21,13 @@
     }
     header.customize{
         background-image:url('<?php echo $_SESSION["header_bg"]; ?>');
+    }
+    @media screen and (max-width: 660px) {
+        header a, header a span{
+            color: #ffffff !important;
+        }
+        body header .container nav #menu-main li a{
+            color: #ffffff !important;
+        }
     }
 </style>

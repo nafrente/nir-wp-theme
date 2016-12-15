@@ -48,6 +48,7 @@ get_header('home');
                     -->
                 </div>
             <a href="<?php echo site_url('portfolio'); ?>" class="btn">All Projects &rsaquo;</a>
+            </div>
 
             <div class="featured-projects">
                 <?php

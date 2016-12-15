@@ -33,6 +33,14 @@
                     header.customize{
                         background-image:url('<?php echo $_SESSION["header_bg"]; ?>');
                     }
+                    @media screen and (max-width: 660px) {
+                        header a, header a span{
+                            color: #ffffff !important;
+                        }
+                        body header .container nav #menu-main li a{
+                            color: #ffffff !important;
+                        }
+                    }
                 </style>
 
             <h1><?php the_title(); ?></h1>
