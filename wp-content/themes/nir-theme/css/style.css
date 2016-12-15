@@ -388,30 +388,30 @@ footer {
   .default-project .single-sidebar > div,
   .single-post .single-sidebar > div {
     margin: 20px 10px; }
-  .default-page .single-sidebar .internal-sidebar,
-  .single-project .single-sidebar .internal-sidebar,
-  .default-project .single-sidebar .internal-sidebar,
-  .single-post .single-sidebar .internal-sidebar {
+  .default-page .single-sidebar .h2-links-sidebar,
+  .single-project .single-sidebar .h2-links-sidebar,
+  .default-project .single-sidebar .h2-links-sidebar,
+  .single-post .single-sidebar .h2-links-sidebar {
     padding: 15px; }
-    .default-page .single-sidebar .internal-sidebar .sidebar-title,
-    .single-project .single-sidebar .internal-sidebar .sidebar-title,
-    .default-project .single-sidebar .internal-sidebar .sidebar-title,
-    .single-post .single-sidebar .internal-sidebar .sidebar-title {
+    .default-page .single-sidebar .h2-links-sidebar .sidebar-title,
+    .single-project .single-sidebar .h2-links-sidebar .sidebar-title,
+    .default-project .single-sidebar .h2-links-sidebar .sidebar-title,
+    .single-post .single-sidebar .h2-links-sidebar .sidebar-title {
       border-bottom: 1px solid #000; }
-      .default-page .single-sidebar .internal-sidebar .sidebar-title h3,
-      .single-project .single-sidebar .internal-sidebar .sidebar-title h3,
-      .default-project .single-sidebar .internal-sidebar .sidebar-title h3,
-      .single-post .single-sidebar .internal-sidebar .sidebar-title h3 {
+      .default-page .single-sidebar .h2-links-sidebar .sidebar-title h3,
+      .single-project .single-sidebar .h2-links-sidebar .sidebar-title h3,
+      .default-project .single-sidebar .h2-links-sidebar .sidebar-title h3,
+      .single-post .single-sidebar .h2-links-sidebar .sidebar-title h3 {
         padding: 10px; }
-    .default-page .single-sidebar .internal-sidebar .sidebar-content,
-    .single-project .single-sidebar .internal-sidebar .sidebar-content,
-    .default-project .single-sidebar .internal-sidebar .sidebar-content,
-    .single-post .single-sidebar .internal-sidebar .sidebar-content {
+    .default-page .single-sidebar .h2-links-sidebar .sidebar-content,
+    .single-project .single-sidebar .h2-links-sidebar .sidebar-content,
+    .default-project .single-sidebar .h2-links-sidebar .sidebar-content,
+    .single-post .single-sidebar .h2-links-sidebar .sidebar-content {
       padding: 10px; }
-      .default-page .single-sidebar .internal-sidebar .sidebar-content a,
-      .single-project .single-sidebar .internal-sidebar .sidebar-content a,
-      .default-project .single-sidebar .internal-sidebar .sidebar-content a,
-      .single-post .single-sidebar .internal-sidebar .sidebar-content a {
+      .default-page .single-sidebar .h2-links-sidebar .sidebar-content a,
+      .single-project .single-sidebar .h2-links-sidebar .sidebar-content a,
+      .default-project .single-sidebar .h2-links-sidebar .sidebar-content a,
+      .single-post .single-sidebar .h2-links-sidebar .sidebar-content a {
         text-decoration: underline !important;
         border: none;
         display: block;

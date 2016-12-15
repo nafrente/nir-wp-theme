@@ -53,15 +53,16 @@ function nir_widgets(){
                     if($('.single-main h2').length > 0){
                         $('.single-main h2').each(function(i) {
                             $(this).attr('id', 'h2-title-'+ i);
-                            $('.sidebar-content').append('<a class="sidebar-link" href="#h2-title-'+ i +'">'+ $(this).text() +'</a>');
+                            $('.h2-links-sidebar .sidebar-content').append('<a class="sidebar-link" href="#h2-title-'+ i +'">'+ $(this).text() +'</a>');
                             i++;
                         });
                     }else{
                         $('.sidebar-content').append('<a class="sidebar-link"><?php _e('No sections available...', 'nir-theme')?></a>');
+                        $('.h2-links-sidebar').hide();
                     }
                 });
             </script>
-                <div class="internal-sidebar">
+                <div class="h2-links-sidebar">
 
                     <div class="sidebar-title">
                         <h3><?php _e('Sections', 'nir-theme')?></h3>
