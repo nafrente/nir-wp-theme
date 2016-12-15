@@ -59,21 +59,12 @@ function project_admin_init(){
         //Getting the updated meta data
         $project_data = get_post_meta($post->ID, 'project_data', true);
 
-        //Setting the default values on the meta data
-        if(!isset($project_data['nir_color']) && !isset($project_data['nir_color']) ){
-            $project_data = array();
-            $nir_color = $project_data['nir_color'] = '#35ba7c';
-            $nir_logo_color = $project_data['nir_logo_color'] = '#ffffff';
-            $nir_text = $project_data['nir_text'] = __('Read More', 'nir-plugin' );
-            update_post_meta( $post->ID, 'project_data', $project_data );
-        }
-
-        if ( !isset($project_data['nir_color']) ){
+        if ( !isset($project_data['nir_color']) || $project_data['nir_color']== '' ){
             $nir_color = '#35ba7c';
         }else{
             $nir_color = $project_data['nir_color'];
         }
-        if ( !isset($project_data['nir_logo_color']) ){
+        if ( !isset($project_data['nir_logo_color']) || $project_data['nir_logo_color'] == '' ){
             $nir_logo_color = '#ffffff';
         }else{
             $nir_logo_color = $project_data['nir_logo_color'];
@@ -84,7 +75,7 @@ function project_admin_init(){
         else{
             $nir_featured = '';
         }
-        if ( !isset($project_data['nir_text']) ){
+        if ( !isset($project_data['nir_text']) || $project_data['nir_text'] == ''){
             $nir_text = __('Read More', 'nir-plugin' );
         }else{
             $nir_text = $project_data['nir_text'];
