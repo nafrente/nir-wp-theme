@@ -69,7 +69,7 @@ get_header();
                 <?php
                 $cat_args = array(
                     'orderby'          => 'name',
-                    'parent'    => '7',
+                    'parent'    => '6',
                 );
                 $args2 = array(
                     'post_type' => 'project',
