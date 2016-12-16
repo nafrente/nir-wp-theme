@@ -707,7 +707,30 @@ footer {
       }
     }
   }
-  .list-projects{
+  .category-title{
+    font-size: 30px;
+    margin: 5px 30px;
+    position: relative;
+    overflow: hidden;
+    span.text{
+      background: #f9fafb;
+      margin-right: 15px;
+    }
+    span.border{
+      height: 5px;
+      display: inline-block;
+      position: absolute;
+      top:22px;
+      background-color: #35ba7c;
+      width: 100%;
+    }
+  }
+  .category-title:nth-child(3){
+    span.border {
+      background-color: #f36f43;
+    }
+  }
+  .list-projects:not(.by-title), .grouped-projects{
     -webkit-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.75);
     box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.75);

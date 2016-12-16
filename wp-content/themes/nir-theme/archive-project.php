@@ -67,35 +67,53 @@ get_header();
             </div>
             <div class="list-projects by-title hide">
                 <?php
-
+                $cat_args = array(
+                    'orderby'          => 'name',
+                    'parent'    => '7',
+                );
                 $args2 = array(
                     'post_type' => 'project',
                     'posts_per_page' => -1,
                     'orderby' => 'title',
                     'order'   => 'ASC',
                 );
+                $categories = get_categories( $cat_args );
                 $loop2 = new WP_Query( $args2 );
                 $how_many_projects = 200; //The number of projects that are featured to be shown
-                while ( $loop2->have_posts() ) : $loop2->the_post();
-                    $post_id = get_the_ID();
-                    if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
-                        $large_image_url = get_the_post_thumbnail_url();
-                    }
-                    else{
-                        $large_image_url =  the_post_thumbnail_url() . '/default.jpg';
-                    }
-                    if( $how_many_projects > -1) {
-                        echo '<div class="list-project" style="background-image: url(' . $large_image_url . ');">';
-                        echo '<a href="' . get_permalink() . '" class="link-project">';
-                        echo '<h2>' . get_the_title() . '</h2>';
-                        echo '<p>' . get_the_date() . '</p>';
-                        echo '</a>';
-                        echo '<span class="categories">'; the_category( ', ' ); echo '</span>';
-                        echo '</div>';
-                    }
-                    $how_many_projects = $how_many_projects - 1;
-                endwhile;
+
+                foreach ($categories as $cat){
+                    echo '<h2 class="category-title"><span class="text">' . $cat->name . '</span><span class="border"></span></h2>';
+
+                    echo '<div class="grouped-projects">';
+
+                    while ( $loop2->have_posts() ) : $loop2->the_post();
+                        $post_id = get_the_ID();
+                        if ( has_post_thumbnail() ) { // check if the post has a Post Thumbnail assigned to it.
+                            $large_image_url = get_the_post_thumbnail_url();
+                        }
+                        else{
+                            $large_image_url =  the_post_thumbnail_url() . '/default.jpg';
+                        }
+
+                        if (in_category($cat->cat_ID, $post_id) ){
+                            if( $how_many_projects > -1) {
+
+                                echo '<div class="list-project" style="background-image: url(' . $large_image_url . ');">';
+                                echo '<a href="' . get_permalink() . '" class="link-project">';
+                                echo '<h2>' . get_the_title() . '</h2>';
+                                echo '<p>' . get_the_date() . '</p>';
+                                echo '</a>';
+                                echo '<span class="categories">'; the_category( ', ' ); echo '</span>';
+                                echo '</div>';
+                            }
+                            $how_many_projects = $how_many_projects - 1;
+                        }
+                    endwhile;
+                    echo '</div>';
+                }//End for each
                 ?>
+
+
             </div>
         </div>
     </div>
