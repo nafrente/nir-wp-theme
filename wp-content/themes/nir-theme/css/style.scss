@@ -239,6 +239,12 @@ footer {
       text-decoration: none;
       position: relative;
       padding-left: 8px;
+      .fa-chevron-up{
+        color: inherit;
+        font-size: 12px;
+        position: relative;
+        top: -4px;
+      }
     }
     #top:before{
       content: "";
