@@ -13,6 +13,11 @@ function nir_enqueue(){
     wp_register_style('nir_grid' , get_template_directory_uri() . '/css/grid/gridlex.css');
     wp_enqueue_style('nir_grid');
 
+    //Font awesome
+    wp_register_style('nir_font_awesome' , get_template_directory_uri() . '/css/font-awesome.min.css');
+    wp_enqueue_style('nir_font_awesome');
+
+
     //Slider styles
     wp_register_style('nir_css1_slick' ,get_template_directory_uri() . '/slick/slick.css');
     wp_enqueue_style('nir_css1_slick');

@@ -148,6 +148,39 @@ body.default-page header {
   -webkit-transition: 0.333s background ease;
   transition: 0.333s background ease; }
 
+#searchform .search-input-group {
+  margin-left: -15px; }
+  #searchform .search-input-group .input-txt {
+    height: 39px;
+    margin: 0;
+    display: inline-block;
+    width: 80%;
+    border: 1px solid #272c35;
+    border-right: none;
+    font-size: 12px;
+    padding-left: 10px; }
+  #searchform .search-input-group .search-btn {
+    position: relative;
+    display: inline-block;
+    margin: 0 -5px 0;
+    width: 20%;
+    overflow: hidden;
+    height: 39px;
+    top: 15px;
+    border: 1px solid #272c35; }
+    #searchform .search-input-group .search-btn #searchsubmit {
+      position: absolute;
+      margin: 0;
+      width: 100%;
+      z-index: 2;
+      border: none; }
+    #searchform .search-input-group .search-btn .fa-search {
+      position: absolute;
+      top: 8px;
+      font-size: 20px;
+      left: calc(50% - 9px);
+      z-index: 1; }
+
 footer {
   min-height: 60px; }
   footer .container a {
@@ -660,6 +693,19 @@ footer {
       color: #35ba7c; }
 
 /*End Single project / Single Post / Default page */
+/*Default category page */
+.category-body {
+  float: left;
+  width: 66.667%; }
+  .category-body .posts-list {
+    background-size: 100%;
+    background-position: -400px 50%;
+    background-repeat: no-repeat;
+    margin: 20px 0; }
+    .category-body .posts-list .single-list {
+      margin: 20px 0;
+      padding: 30px; }
+
 .full-width {
   width: 100%;
   padding: 0;

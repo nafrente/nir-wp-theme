@@ -25,6 +25,18 @@ function nir_widgets(){
         'after_title'  => '</span></div><div class="default-body">'
     ));
 
+    //Registering the Category page sidebar
+    register_sidebar(array(
+        'name'          => __('Category Page Sidebar Area', 'nir-theme'),
+        'id'            => 'nir_category_sidebar',
+        'description'   => __('This is the sidebar of the default category of posts and projects.', 'nir-theme'),
+        'class'         => '',
+        'before_widget' => '<div id="%1$s" class="default-widget %2$s">',
+        'after_widget'  => '</div></div>',
+        'before_title'  => '<div class="default-title"><span>',
+        'after_title'  => '</span></div><div class="default-body">'
+    ));
+
     //Creating a custom widget for h2 tags links
     class NIR_Links_Widget extends WP_Widget{
         //Sets up the widgets name etc
