@@ -67,9 +67,10 @@ get_header();
             </div>
             <div class="list-projects by-title hide">
                 <?php
+                $portfolio_id = get_cat_ID( "Portfolio" );
                 $cat_args = array(
                     'orderby'          => 'name',
-                    'parent'    => '6',
+                    'parent'    => $portfolio_id,
                 );
                 $args2 = array(
                     'post_type' => 'project',
