@@ -39,4 +39,31 @@ jQuery( document ).ready(function() {
             $('.branding a span').addClass('hide-on-mobile');
         }
     })
+
+    //Unwrapping images from p tags done by wordpress
+    var imgTags = $( '.single-main img' );
+    if ( imgTags.parent().is( 'p' ) ) {
+        imgTags.unwrap();
+    }
+
+    // link scroll
+    $('a').on('click', function (event) {
+        if (this.hash !== "") {
+            event.preventDefault();
+            var hash = this.hash;
+            $('html, body').animate(
+                {scrollTop: $(hash).offset().top},
+                800,
+                function(){
+                // Add hash (#) to URL when done scrolling (default click behavior)
+                window.location.hash = hash;
+            });
+        }
+    })
+    //Scroll top link
+    $('#top-link').on('click', function (event) {
+        event.preventDefault();
+        $('html, body').animate({scrollTop: 0}, 800);
+    })
+
 });

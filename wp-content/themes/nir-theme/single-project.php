@@ -45,10 +45,8 @@
 
             <h1><?php the_title(); ?></h1>
 
-            <div class="basic">
                 <?php the_content(); ?>
 
-            </div>
 
             <?php // End of the loop.
             endwhile; ?>
