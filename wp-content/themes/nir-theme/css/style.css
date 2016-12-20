@@ -123,12 +123,12 @@ body header {
         text-shadow: 0 1px 3px rgba(0, 0, 0, 0.125); }
 
 body.home-page header {
-  height: 600px;
+  height: 52.6315vw;
   -webkit-transition: 0.333s height ease;
   transition: 0.333s height ease; }
 
 body.default-page header {
-  height: 300px;
+  height: 40vw;
   -webkit-transition: 0.333s height ease;
   transition: 0.333s height ease; }
 
@@ -765,7 +765,7 @@ footer {
   -webkit-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.125);
   -moz-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.125);
   box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.125);
-  margin: 50px 0px; }
+  margin: 20px 0px 60px; }
   .portfolio .list-projects:not(.by-title) .link-project, .portfolio .grouped-projects .link-project {
     background: rgba(255, 255, 255, 0.7);
     height: 100%;
@@ -781,7 +781,7 @@ footer {
       font-size: 15px;
       font-weight: 400; }
   .portfolio .list-projects:not(.by-title) .link-project:hover, .portfolio .grouped-projects .link-project:hover {
-    background: none; }
+    background-color: rgba(19, 181, 229, 0.8); }
   .portfolio .list-projects:not(.by-title) .list-project, .portfolio .grouped-projects .list-project {
     position: relative;
     display: block;
@@ -800,6 +800,14 @@ footer {
         border: none; }
 .portfolio .hide {
   display: none; }
+.portfolio .list-projects .list-project.hover h2, .portfolio .list-projects .list-project.hover p {
+  -webkit-transition: 0.333s all ease;
+  transition: 0.333s all ease;
+  color: #ffffff !important; }
+.portfolio .list-projects .list-project.hover .categories a {
+  -webkit-transition: 0.333s all ease;
+  transition: 0.333s all ease;
+  color: #ffffff !important; }
 
 /* Responsive */
 @media screen and (max-width: 400px) {

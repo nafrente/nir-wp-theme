@@ -160,14 +160,14 @@ body {
 } // Generic body
 body.home-page {
   header{
-    height: 600px;
+    height: 52.6315vw;
     -webkit-transition: 0.333s height ease;
     transition: 0.333s height ease;
   }
 }
 body.default-page {
   header{
-    height: 300px;
+    height: 40vw;
     -webkit-transition: 0.333s height ease;
     transition: 0.333s height ease;
   }
@@ -819,7 +819,7 @@ footer {
     -webkit-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.125);
     -moz-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.125);
     box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.125);
-    margin: 50px 0px;
+    margin: 20px 0px 60px;
     .link-project{
       background:rgba(255, 255, 255, 0.7);
       height: 100%;
@@ -838,12 +838,9 @@ footer {
       }
 
     }
-    .link-project:hover{
-      background: none;
-      //background: rgba(190, 230, 243, 0.7);
-      //h2, p{
-      //  color: #ffffff !important;
-      //}
+    .link-project:hover {
+      background-color: rgba(19, 181, 229, 0.8);
+
     }
     .list-project{
       position: relative;
@@ -864,11 +861,28 @@ footer {
         }
       }
     }
+
   }
+
   .hide{
     display: none;
   }
+  .list-projects .list-project.hover{
+      h2, p {
+        -webkit-transition: 0.333s all ease;
+        transition: 0.333s all ease;
+        color: #ffffff !important;
+      }
+      .categories a{
+        -webkit-transition: 0.333s all ease;
+        transition: 0.333s all ease;
+        color: #ffffff !important;
+      }
+  }
+
+
 }//Portfolio
+
 
 /////////////////* Custom CSS Ends*//////////////////
 /* Responsive */
@@ -887,6 +901,7 @@ footer {
     height: 800px !important;
     -webkit-transition: 0.333s height ease;
     transition: 0.333s height ease;
+
   }
   header nav {
     font-size: 1.5em;

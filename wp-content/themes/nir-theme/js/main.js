@@ -26,6 +26,12 @@ jQuery( document ).ready(function() {
         jQuery(this).addClass('selected');
         jQuery(this).siblings().removeClass('selected');
     });
+    //Special hover effect on links
+    $('.portfolio .list-projects .link-project').hover(function () {
+        $(this).closest('.list-project').addClass('hover');
+    }, function () {
+        $(this).closest('.list-project').removeClass('hover');
+    });
 
     //Main menu events
     $('#mobile-menu-text .text').on('click', function (event) {
@@ -40,7 +46,7 @@ jQuery( document ).ready(function() {
             $('.branding a span').addClass('hide-on-mobile');
             $('header .container nav').removeClass('full');
         }
-    })
+    });
 
     //Unwrapping images from p tags done by wordpress
     var imgTags = $( '.single-main img' );
@@ -61,11 +67,10 @@ jQuery( document ).ready(function() {
                 window.location.hash = hash;
             });
         }
-    })
+    });
     //Scroll top link
     $('#top-link').on('click', function (event) {
         event.preventDefault();
         $('html, body').animate({scrollTop: 0}, 800);
-    })
-
+    });
 });
