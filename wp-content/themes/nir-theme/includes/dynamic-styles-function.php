@@ -22,7 +22,6 @@ function updating_styles($nir_project_id){
             $nir_project_data = $nir_return_data = array();
             $nir_project_data = get_post_meta($nir_project_id , 'project_data', true );
 
-            $dynamic_styles = array();
             //Setting link color
             $nir_return_data["link_color"] = isset($nir_project_data['nir_color']) ? $nir_project_data['nir_color'] : "#35ba7c";
 
@@ -35,8 +34,29 @@ function updating_styles($nir_project_id){
 
             return $nir_return_data;
         }if('post' == $post_type) {
-            //Post setup
-            return;
+            //Getting meta data
+            $nir_post_data = $nir_return_data = array();
+            $nir_post_data = get_post_meta($nir_project_id, 'post_meta_dd', true);
+
+            //Setting link color
+            $nir_return_data["link_color"] = isset($nir_post_data['nir_color']) ? $nir_post_data['nir_color'] : "#35ba7c";
+
+            //Setting logo color
+            $nir_return_data["logo_color"] = isset($nir_post_data['nir_logo_color']) ? $nir_post_data['nir_logo_color'] : "#FFFFFF";
+
+            //Setting featured image
+            if( get_the_post_thumbnail_url($nir_project_id) ){
+                $nir_return_data['header_bg'] = get_the_post_thumbnail_url($nir_project_id);
+            }else{
+                $nir_return_data['header_bg'] = get_template_directory_uri() . '/img/default-header.jpg';
+            }
+
+            return $nir_return_data;
+        }else{
+            $nir_return_data["logo_color"] = "#FFFFFF";
+            $nir_return_data["link_color"] = "#35ba7c";
+            $nir_return_data['header_bg'] = get_template_directory_uri() . '/img/default-header.jpg';
+            return $nir_return_data;
         }
     }else{ //Default styles in case an error with the argument passed on the function
         $nir_return_data["logo_color"] = "#FFFFFF";
