@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <?php wp_head(); ?>
-    <?php include_once('dynamic-styles.php'); ?>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
 

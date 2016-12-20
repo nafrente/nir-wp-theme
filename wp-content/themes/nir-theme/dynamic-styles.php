@@ -1,26 +1,29 @@
 <!-- Responsive Meta tag -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
+<?php
+$styles_array = updating_styles('default');
+
+?>
 <!-- Dynamic Custom Style -->
 <style>
     /*Logo and text colors*/
     header a, header a span{
-        color: <?php echo $_SESSION["logo_color"]; ?> !important;
+        color: <?php echo $styles_array["logo_color"]; ?> !important;
     }
     body header .container nav #menu-main li a{
-        color: <?php echo $_SESSION["logo_color"]; ?> !important;
+        color: <?php echo $styles_array["logo_color"]; ?> !important;
     }
     body header .container nav #menu-main li.current-menu-item {
-        border-color: <?php echo $_SESSION["logo_color"]; ?> !important;
+        border-color: <?php echo $styles_array["logo_color"]; ?> !important;
     }
     body header .container nav .branding svg{
-        fill: <?php echo $_SESSION["logo_color"]; ?> !important;
+        fill: <?php echo $styles_array["logo_color"]; ?> !important;
     }
     body a{
-        color: <?php echo $_SESSION["link_color"]; ?> !important;
+        color: <?php echo $styles_array["link_color"]; ?> !important;
     }
     header.customize{
-        background-image:url('<?php echo $_SESSION["header_bg"]; ?>');
+        background-image:url('<?php echo $styles_array["header_bg"]; ?>');
     }
     @media screen and (max-width: 660px) {
         header a, header a span{
