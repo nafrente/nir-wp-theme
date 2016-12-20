@@ -120,7 +120,7 @@ body header {
       body header .container nav #menu-main li.current-menu-item {
         border-bottom: 2px solid #000; }
       body header .container nav #menu-main li:hover {
-        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.125); }
 
 body.home-page header {
   height: 600px;
@@ -237,7 +237,8 @@ footer {
   .main h1 {
     font-size: 2.6em;
     font-weight: normal;
-    line-height: 1.667; }
+    line-height: 1.667;
+    margin-bottom: 40px; }
   .main h2 {
     font-size: 2.3em;
     font-weight: normal;
@@ -250,7 +251,7 @@ footer {
   .main .primary {
     background: #fff;
     border-radius: 0.25em;
-    box-shadow: 0 0.125em 1em rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0.125em 1em rgba(0, 0, 0, 0.125);
     margin: -150px 0 0 0;
     max-width: 720px;
     min-height: 300px;
@@ -540,9 +541,9 @@ footer {
 .default-project .single-main,
 .single-post .single-main {
   background: #ffffff;
-  -webkit-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.125);
+  -moz-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.125);
+  box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.125);
   margin: 0;
   padding: 0 0 30px;
   position: relative;
@@ -761,9 +762,9 @@ footer {
 .portfolio .category-title:nth-child(3) span.border {
   background-color: #f36f43; }
 .portfolio .list-projects:not(.by-title), .portfolio .grouped-projects {
-  -webkit-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.125);
+  -moz-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.125);
+  box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.125);
   margin: 50px 0px; }
   .portfolio .list-projects:not(.by-title) .link-project, .portfolio .grouped-projects .link-project {
     background: rgba(255, 255, 255, 0.7);
@@ -833,6 +834,13 @@ footer {
     .main .primary footer .container {
       max-width: 1400px; } }
 @media screen and (max-width: 1200px) {
+  .main h1 {
+    font-size: 2em;
+    margin: 15px 0 40px; }
+
+  .main h2 {
+    font-size: 1.8em; }
+
   header {
     height: 450px !important;
     background-size: cover !important; }
@@ -983,6 +991,9 @@ footer {
     body header .container nav #menu-main.hide-on-mobile {
       display: none; }
 
+  body header .container nav.full {
+    height: 100%; }
+
   header {
     background-size: cover !important;
     background-position: 50% 50%;
@@ -996,9 +1007,9 @@ footer {
       position: relative;
       z-index: 10; }
     .portfolio-carousel .the-carousel .single {
-      -webkit-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.5);
-      -moz-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.5);
-      box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.75); }
+      -webkit-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.125);
+      -moz-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.125);
+      box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.125); }
     .portfolio-carousel .the-carousel .slick-current.slick-active {
       width: 352px !important; }
 

@@ -34,9 +34,11 @@ jQuery( document ).ready(function() {
         if( !$(this).hasClass('open') ){
             $('#menu-main').removeClass('hide-on-mobile');
             $('.branding a span').removeClass('hide-on-mobile');
+            $('header .container nav').addClass('full');
         }else {
             $('#menu-main').addClass('hide-on-mobile');
             $('.branding a span').addClass('hide-on-mobile');
+            $('header .container nav').removeClass('full');
         }
     })
 

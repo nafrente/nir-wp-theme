@@ -149,7 +149,7 @@ body {
             border-bottom: 2px solid #000;
           }
           li:hover{
-            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.125);
           }
         }
       }//Nav
@@ -297,6 +297,7 @@ footer {
     font-size: 2.6em;
     font-weight: normal;
     line-height: 1.667;
+    margin-bottom: 40px;
   }
   h2 {
     font-size: 2.3em;
@@ -313,7 +314,7 @@ footer {
   .primary {
     background: #fff;
     border-radius: 0.25em;
-    box-shadow: 0 0.125em 1em rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0.125em 1em rgba(0, 0, 0, 0.125);
     margin: -150px 0 0 0;
     max-width: 720px;
     min-height: 300px;
@@ -628,9 +629,9 @@ footer {
   }
   .single-main{
     background: #ffffff;
-    -webkit-box-shadow: 0px 6px 45px -4px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 6px 45px -4px rgba(0,0,0,0.75);
-    box-shadow: 0px 6px 45px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 6px 45px -4px rgba(0,0,0,0.125);
+    -moz-box-shadow: 0px 6px 45px -4px rgba(0,0,0,0.125);
+    box-shadow: 0px 6px 45px -4px rgba(0,0,0,0.125);
     margin: 0;
     padding: 0 0 30px;
     position: relative;
@@ -815,9 +816,9 @@ footer {
     }
   }
   .list-projects:not(.by-title), .grouped-projects{
-    -webkit-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.75);
-    box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.125);
+    -moz-box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.125);
+    box-shadow: 0px 6px 45px -4px rgba(0, 0, 0, 0.125);
     margin: 50px 0px;
     .link-project{
       background:rgba(255, 255, 255, 0.7);
@@ -912,6 +913,13 @@ footer {
   }
 }
 @media screen and (max-width: 1200px) {
+  .main h1{
+    font-size: 2em;
+    margin: 15px 0 40px;
+  }
+  .main h2{
+    font-size: 1.8em;
+  }
   header {
     height: 450px !important;
     background-size: cover !important;
@@ -1093,6 +1101,9 @@ footer {
     }
 
   }
+  body header .container nav.full{
+    height: 100%;
+  }
   header {
     background-size: cover !important;
     background-position: 50% 50%;
@@ -1109,9 +1120,9 @@ footer {
     }
     .the-carousel{
       .single{
-        -webkit-box-shadow: 0px 6px 45px -4px rgba(0,0,0,0.5);
-        -moz-box-shadow: 0px 6px 45px -4px rgba(0,0,0,0.5);
-        box-shadow: 0px 6px 45px -4px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 0px 6px 45px -4px rgba(0,0,0,0.125);
+        -moz-box-shadow: 0px 6px 45px -4px rgba(0,0,0,0.125);
+        box-shadow: 0px 6px 45px -4px rgba(0,0,0,0.125);
       }
       .slick-current.slick-active{
         width: 352px !important;
