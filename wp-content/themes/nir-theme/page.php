@@ -2,9 +2,7 @@
 
 <div class="default-page">
     <div class="container">
-        <aside class="single-sidebar">
-            <?php get_sidebar(); ?>
-        </aside>
+
         <section class="single-main">
             <?php
             // Start the loop.
@@ -19,6 +17,9 @@
             endwhile; ?>
         </section>
 
+        <aside class="single-sidebar">
+            <?php get_sidebar(); ?>
+        </aside>
     </div>
 </div>
 

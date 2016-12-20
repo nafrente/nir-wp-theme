@@ -1015,7 +1015,7 @@ footer {
 
   .default-page .single-main, .single-project .single-main, .default-project .single-main, .single-post .single-main {
     width: 100%;
-    margin: 30px 0px;
+    margin: 0px 0px 20px;
     top: 0; }
 
   .default-page .single-sidebar, .single-project .single-sidebar, .default-project .single-sidebar, .single-post .single-sidebar {

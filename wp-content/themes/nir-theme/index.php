@@ -6,10 +6,7 @@
             <h1><?php wp_title(); ?></h1>
         </section>
 
-        <aside class="single-sidebar">
-            <?php get_sidebar('categories'); ?>
 
-        </aside>
         <section class="category-body">
 
             <div class="posts-list">
@@ -42,6 +39,10 @@
             </div>
 
         </section>
+
+        <aside class="single-sidebar">
+            <?php get_sidebar('categories'); ?>
+        </aside>
 
     </div>
 </div>

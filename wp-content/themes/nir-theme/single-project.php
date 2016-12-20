@@ -2,9 +2,7 @@
 
 <div class="single-project">
     <div class="container">
-        <aside class="single-sidebar">
-            <?php get_sidebar('internal'); ?>
-        </aside>
+
         <section class="single-main">
             <?php
             // Start the loop.
@@ -51,7 +49,9 @@
             <?php // End of the loop.
             endwhile; ?>
         </section>
-
+        <aside class="single-sidebar">
+            <?php get_sidebar('internal'); ?>
+        </aside>
     </div>
 </div>
 

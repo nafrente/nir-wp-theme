@@ -8,9 +8,7 @@ get_header();
 
 <div class="default-page">
     <div class="container">
-        <aside class="single-sidebar">
 
-        </aside>
         <section class="single-main">
             <?php
             // Start the loop.
@@ -26,7 +24,9 @@ get_header();
             <?php // End of the loop.
             endwhile; ?>
         </section>
+        <aside class="single-sidebar">
 
+        </aside>
     </div>
 </div>
 
