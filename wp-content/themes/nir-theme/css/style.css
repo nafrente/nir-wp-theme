@@ -850,8 +850,18 @@ footer {
   header nav ul {
     margin-top: 1.33em; }
 
-  header nav ul li {
-    margin-right: 1em; }
+  body header .container nav .branding {
+    width: 15%; }
+    body header .container nav .branding a span {
+      display: none; }
+
+  header nav div a svg {
+    margin-top: 0;
+    width: 60px;
+    height: 60px; }
+
+  body header .container nav #menu-main li {
+    margin-right: .3em; }
 
   .container {
     max-width: 800px;
@@ -882,11 +892,6 @@ footer {
 
   body header .container nav {
     padding: 20px; }
-
-  header nav div a svg {
-    margin-top: 0;
-    width: 40px;
-    height: 40px; }
 
   body header .container nav #menu-main {
     margin-top: 20px; }
