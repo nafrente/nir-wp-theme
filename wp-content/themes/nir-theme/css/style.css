@@ -210,15 +210,6 @@ footer {
   -webkit-transition: 1s max-width ease;
   transition: 1s max-width ease; }
 
-/*.paper-edge {
-  content: '';
-  background-image: url('../img/paper-edge.png');
-  background-repeat: repeat-x;
-  display: block;
-  height: 40px;
-  margin: -40px 0 0;
-  width: 100% !important;
-}*/
 .main {
   margin: 0 auto 60px;
   max-width: 1000px;
