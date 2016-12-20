@@ -358,7 +358,12 @@ footer {
     background: transparent;
     border: 1px solid #000;
     padding: 12px;
-    font-size: 15px; }
+    font-size: 15px;
+    cursor: pointer; }
+  .wpcf7-form .wpcf7-submit:hover {
+    background: rgba(39, 189, 207, 0.2);
+    -webkit-transition: 0.333s background ease;
+    transition: 0.333s background ease; }
   .wpcf7-form ::-webkit-input-placeholder {
     font-size: 12px; }
   .wpcf7-form :-moz-placeholder {
@@ -569,6 +574,16 @@ footer {
   .default-project .single-main p,
   .single-post .single-main p {
     padding: 15px 30px; }
+  .default-page .single-main form,
+  .single-project .single-main form,
+  .default-project .single-main form,
+  .single-post .single-main form {
+    padding: 15px 30px; }
+    .default-page .single-main form p,
+    .single-project .single-main form p,
+    .default-project .single-main form p,
+    .single-post .single-main form p {
+      padding: 0; }
   .default-page .single-main .basic, .default-page .single-main .green, .default-page .single-main .blue,
   .single-project .single-main .basic,
   .single-project .single-main .green,
